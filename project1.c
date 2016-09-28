@@ -2,22 +2,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <omp.h>
 
-void readData(double data[500][4400]);
-void readKeys(long keys[4400]);
-int getKey(int line_index, int keys[4400]);
-
+void readData();
+void readKeys();
+int getKey(int line_index);
+static double data[500][4400];
+static long keys[4400];
 int main(void)
 {
-    static double data[500][4400];
-    static long keys[4400];
+
 
     readData(data);
     readKeys(keys);
-
+    printf("%f",data[0][0]);
 }
 
-void readData(double data[500][4400]){
+void readData(){
     FILE * fp;
     char * line = NULL;
     size_t len = 0;
@@ -49,7 +50,7 @@ void readData(double data[500][4400]){
         free(line);
 }
 
-void readKeys(long keys[4400]){
+void readKeys(){
     FILE * fp;
     char * line = NULL;
     size_t len = 0;
@@ -78,7 +79,7 @@ void readKeys(long keys[4400]){
         free(line);
 }
 
-int getKey(int line_index, int keys[4400]){
+int getKey(int line_index){
 
     return 0;
 }
