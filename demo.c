@@ -2,10 +2,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+static double dia=0.000001;
 
-int main(){
-    char str[] = "12345.56\n";
-    double d;
-    sscanf(str, "%lf", &d);
-    printf("%lf", d);
+char *paddingWithZero(int num);
+
+int main()
+{
+    paddingWithZero(41);
+}
+
+char *paddingWithZero(int num){
+    static char *str[4];
+    sprintf(str, "%d", num);
+    int len=(int)strlen(str);
+    printf("%d",len);
+    return str;
 }
