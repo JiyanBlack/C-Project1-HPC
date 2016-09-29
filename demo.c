@@ -6,13 +6,13 @@ static double dia = 0.000001;
 
 int isNeighbour(double oneBlock[]);
 
-int main()
-{
-    double oneBlock[4] = {1.11, 1.12, 1.14, -1};
-    if (isNeighbour(oneBlock))
-        printf("Yes!");
-    else
-        printf("No...");
+int main() {
+   FILE *fp;
+
+   fp = fopen("./test.txt", "w+");
+   fprintf(fp, "This is testing for fprintf,%d...\n",10);
+   fclose(fp);
+   return 0;
 }
 
 int isNeighbour(double oneBlock[])
