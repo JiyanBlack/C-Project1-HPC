@@ -7,7 +7,7 @@
 void readData();
 void readKeys();
 void getBlocks(int col);
-int isNeighbour(double a, double b);
+int isBlock(int i, int j, int m, int n, int col);
 int getKey(char line_numbers);
 double findMin(double array[4400]);
 int compFunc(const void *a, const void *b);
@@ -23,10 +23,9 @@ static const int core_number = 8;
 static double data[500][4400];
 static long keys[4400];
 static const double dia = 0.000001;
-static int *neighbours[500];      //store the row number of all neighbours in a column
-static int neighbour_length[500]; //store the length of all neighbours
-static char *blocks[500];         //blocks[col][array of the rows, e.g:"1 6 7 9","2 4 8 19"]
-static long final_result[500];    //final result of the combination of row..
+static int *blocks[500];       //blocks[col][array of the rows, e.g:"1 6 7 9","2 4 8 19"]
+static int block_number[500];  //the number of block in each column
+static long final_result[500]; //final result of the combination of row
 
 int main(void)
 {
@@ -42,7 +41,7 @@ int main(void)
 #pragma omp parallel firstprivate(localSum)
     {
 #pragma omp for
-        for (int col = 0; col < 1; col++)
+        for (int col = 0; col < 500; col++)
         {
             getBlocks(col);
         }
@@ -51,78 +50,74 @@ int main(void)
 
 void getBlocks(int col)
 {
-    calcNeighbours(col);
-    generateBlocks(col);
-}
-
-void generateBlocks(int col)
-{
-    for (int i = 0; i < neighbour_length[col]; i++)
-    {
-        printf("%d,%d\n", neighbours[col][2 * i], neighbours[col][2 * i + 1]);
-    }
-}
-
-int *quickSearch(int cur_pair, int isBigger, int result[], int col, int target_row, int result_index)
-{
-    int result[4400] = {-1};
-    //quickly search the target row neighbour
-    if (result_index == 0) //means it's the first time running
-    {
-        //find the rough index that the value would be
-        int cur_pair = (int)(neighbour_length[col] * 1000 / 4400.0);
-        if (target_row == neighbours[col][2 * cur_pair])
-        {
-            result[result_index]=neighbours[col][2 * cur_pair+1];
-        }
-    }
-}
-
-void calcNeighbours(int col)
-{
     //generate block lines as a string into the static blocks array
-    int col_neighbours[212326];
-    int neighbour_index = -1;
+    int oneColBlock[4004];
+    int index = 0;
     for (int i = 0; i < 4400; i++)
     {
         for (int j = i + 1; j < 4400; j++)
         {
-            if (isNeighbour(data[col][i], data[col][j]) == 1)
+            if (isBlock(i, j, -1, -1, col) == 1)
             {
-                neighbour_index += 1;
-                col_neighbours[2 * neighbour_index] = i;
-                col_neighbours[2 * neighbour_index + 1] = j;
                 // printf("%d,%d\n", i, j);
+                for (int m = j + 1; m < 4400; m++)
+                {
+                    if (isBlock(i, j, m, -1, col) == 1)
+                    {
+                        // printf("%d,%d,%d\n", i, j, m);
+                        for (int n = m + 1; n < 4400; n++)
+                        {
+                            if (isBlock(i, j, m, n, col) == 1)
+                            {
+                                // printf("Find block at col %d: %d, %d, %d, %d.\n", col, i, j, m, n);
+                                oneColBlock[index] = i;
+                                oneColBlock[index + 1] = j;
+                                oneColBlock[index + 2] = m;
+                                oneColBlock[index + 3] = n;
+                                index += 4;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
-    neighbours[col] = col_neighbours;
-    neighbour_length[col] = neighbour_index + 1;
-    // printf("col %d has neighbour pairs %d\n", col, neighbour_length[col]);
+    block_number[col] = index / 4;
+    if (index > 0)
+        printf("Col %d has blocks number: %d\n", col, block_number[col]);
 }
 
-int *intdup(int const *src, size_t len)
-{
-    int *p = malloc(len * sizeof(int));
-    memcpy(p, src, len * sizeof(int));
-    return p;
-}
-
-int isNeighbour(double a, double b)
+int isBlock(int i, int j, int m, int n, int col)
 {
     // check if two elements are neighbours
-    if (a >= b && a - b < dia)
+    double oneBlock[4] = {-1.0};
+    oneBlock[0] = data[col][i];
+    oneBlock[1] = data[col][j];
+    if (m >= 0)
+        oneBlock[2] = data[col][m];
+    if (n >= 0)
+        oneBlock[3] = data[col][n];
+
+    double min = oneBlock[0];
+    double max = oneBlock[0];
+    for (int i = 1; i < 4; i++)
     {
-        return 1;
+        if (oneBlock[i] > -0.1)
+        {
+            if (min > oneBlock[i])
+            {
+                min = oneBlock[i];
+            }
+            if (max < oneBlock[i])
+            {
+                max = oneBlock[i];
+            }
+        }
     }
-    else if (b >= a && b - a < dia)
-    {
+    if (max - min < dia)
         return 1;
-    }
     else
-    {
         return 0;
-    }
 }
 
 int getKey(char line_numbers)

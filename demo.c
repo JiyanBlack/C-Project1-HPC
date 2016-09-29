@@ -2,21 +2,40 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-static double dia=0.000001;
+static double dia = 0.000001;
 
-char *paddingWithZero(int num);
+int isNeighbour(double oneBlock[]);
 
 int main()
 {
-    int neighbour_length=611;
-    int cur_pair=(int)(neighbour_length*1000/4400.0);
-    printf("%d",cur_pair);
+    double oneBlock[4] = {1.11, 1.12, 1.14, -1};
+    if (isNeighbour(oneBlock))
+        printf("Yes!");
+    else
+        printf("No...");
 }
 
-char *paddingWithZero(int num){
-    static char str[4];
-    sprintf(str, "%d", num);
-    int len=(int)strlen(str);
-    printf("%d",len);
-    return str;
+int isNeighbour(double oneBlock[])
+{
+    // check if two elements are neighbours
+    double min = oneBlock[0];
+    double max = oneBlock[0];
+    for (int i = 1; i < 4; i++)
+    {
+        if (oneBlock[i] > -0.1)
+        {
+            if (min > oneBlock[i])
+            {
+                min = oneBlock[i];
+            }
+            if (max < oneBlock[i])
+            {
+                max = oneBlock[i];
+            }
+        }
+    }
+    if (max - min < 0.1)
+        return 1;
+    else
+        return 0;
 }
