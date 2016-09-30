@@ -7,16 +7,18 @@
 void readData();
 void readKeys();
 void getBlocks(int col);
-int isBlock(int i, int j, int m, int n, int col);
+int isNeighbour(int i, int j, int col);
 double findMin(double array[4400]);
 int compFunc(const void *a, const void *b);
 void printCol(int col);
 int *intdup(int const *src, size_t len);
-void generateBlocks(int col);
+void getNeighbours(int col);
 void calculateSignatures(int col);
-long getKey(int row1, int row2, int row3, int row4);
+long getSignature(int row1, int row2, int row3, int row4);
 void runBlock();
 void getBlocks499();
+void generateBlocks(int col);
+void detectCollision();
 
 //setting: provdie the core number of CPU
 static const int core_number = 8;
@@ -25,190 +27,137 @@ static const int core_number = 8;
 static double data[500][4400];
 static long keys[4400];
 static const double dia = 0.000001;
-static int *blocks[500];       //blocks[col][array of the rows, e.g:"1 6 7 9","2 4 8 19"]
-static int block_number[500];  //the number of block in each column
+static int *neighbours[500][4400]; //blocks[col][array of the rows, e.g:"1 6 7 9","2 4 8 19"]
+static int neighbour_number[500];
+static int *blocks[500];
+static int block_number[500];
 static long *signatures[500];  //store the signature of corresponding column
 static long final_result[500]; //final result of the combination of row
 static int colBlock499[299999999];
 
 // fprintf(fp, "This is testing for fprintf,%d...\n", 10);
-static FILE *fp;
+static FILE *result_txt;
+static FILE *log_txt;
 
 int main(void)
 {
     //control the main work flow
-    fp = fopen("./test.txt", "w+");
+    result_txt = fopen("./result.txt", "w+");
+    log_txt = fopen("./log.txt", "w+");
+
     readData();
     readKeys();
-
-    printf("\nCurrent dia is %f.\n", dia);
-    printf("CPU core number is setted to %d.\n\n", core_number);
-    int col_interval = (int)500.0 / (core_number - 1) + 1;
-    printf("Setting Column interval to: %d\n", col_interval);
-
     omp_set_num_threads(core_number);
-
-    printf("data[0][0] is %f\n", data[0][0]);
-    printf("key[0] is %ld\n", keys[0]);
-    printCol(499);
-    getBlocks499();
 #pragma omp parallel
     {
 #pragma omp for
-        for (int col = 0; col < 499; col++)
-            getBlocks(col);
-#pragma omp barrier
-        if (omp_get_thread_num() == 0)
-            printf("\nstart to calculate signatures for each block.\n");
-#pragma omp for
-        for (int col = 0; col < 500; col++)
+        for (int col = 499; col >= 0; col--)
         {
-            // calculateSignatures(col);
-
-            // printf("%d\n", block_number[col]);
+            getNeighbours(col);
+            generateBlocks(col);
+            calculateSignatures(col);
         }
+#pragma omp barrier
     }
-    fclose(fp);
+    detectCollision();
+    fclose(result_txt);
+    fclose(log_txt);
 }
 
 void calculateSignatures(int col)
 {
-    //calculate the signatures of a col that has blocks
-    printf("CalculateSignatures");
-    long oneSignature[20000];
+    long col_signatures[15836];
     for (int i = 0; i < block_number[col]; i++)
     {
-        oneSignature[i] = getKey(blocks[col][4 * i], blocks[col][4 * i + 1], blocks[col][4 * i + 2], blocks[col][4 * i + 3]);
+        // col_signatures[i] = getSignature(blocks[col][4 * i], blocks[col][4 * i], blocks[col][4 * i], blocks[col][]);
     }
-    signatures[col] = oneSignature;
 }
 
-long getKey(int row1, int row2, int row3, int row4)
+long getSignature(int row1, int row2, int row3, int row4)
 {
     return keys[row1] + keys[row2] + keys[row3] + keys[row4];
 }
 
-void getBlocks499()
+void detectCollision()
 {
-    //generate block lines as a string into the static blocks array
-    // printf("calculating col %d\n", col);
-    int col = 499;
-    long index = 0;
-#pragma omp parallel
+}
+
+void getNeighbours(int col)
+{
+    //generate neighbours for each row in each col
+    int row_counter = 0;
+    for (int i = 0; i < 4400; i++)
     {
-#pragma omp for
-        for (int i = 0; i < 4400; i++)
+        int ele_Neighbours[4400];
+        ele_Neighbours[0] = i;
+        int ele_index = 1;
+        for (int j = i + 1; j < 4400; j++)
         {
-            for (int j = i + 1; j < 4400; j++)
+            if (isNeighbour(i, j, col) == 1)
             {
-                if (isBlock(i, j, -1, -1, col) == 1)
-                {
-                    // printf("%d,%d\n", i, j);
-                    for (int m = j + 1; m < 4400; m++)
-                    {
-                        if (isBlock(i, j, m, -1, col) == 1)
-                        {
-                            // printf("%d,%d,%d\n", i, j, m);
-                            for (int n = m + 1; n < 4400; n++)
-                            {
-                                if (isBlock(i, j, m, n, col) == 1)
-                                {
-                                    if (i == 0)
-                                        fprintf(fp, "Find block at col %d: %d, %d, %d, %d.\n", col, i, j, m, n);
-                                    // printf("Find block at col %d: %d, %d, %d, %d.\n", col, i, j, m, n);
-                                    colBlock499[index] = i;
-                                    colBlock499[index + 1] = j;
-                                    colBlock499[index + 2] = m;
-                                    colBlock499[index + 3] = n;
-                                    index += 4;
-                                }
-                            }
-                        }
-                    }
-                }
+                ele_Neighbours[ele_index] = j;
+                ele_index += 1;
             }
         }
+        if (ele_index >= 4)
+        {
+            ele_Neighbours[ele_index] = 0;
+            neighbours[col][row_counter] = ele_Neighbours;
+            row_counter += 1;
+        }
     }
-    if (index > 0)
+    neighbour_number[col] = row_counter;
+    if (row_counter > 0)
     {
-        block_number[col] = index / 4;
-        // fprintf(fp, "Col %d has blocks number: %d, get by thread %d.\n", col, block_number[col], omp_get_thread_num());
-        printf("Col %d has blocks number: %d, get by thread %d.\n", col, block_number[col], omp_get_thread_num());
+        // printf("Col %d find block groups %d\n", col, neighbour_number[col]);
+        // printf("example output: %d,%d,%d,%d\n", neighbours[col][0][0], neighbours[col][0][1], neighbours[col][0][2], neighbours[col][0][3]);
     }
 }
 
-void getBlocks(int col)
+void generateBlocks(int col)
 {
-    //generate block lines as a string into the static blocks array
-    // printf("calculating col %d\n", col);
-    int oneColBlock[1999999];
-    int index = 0;
-    for (int i = 0; i < 4400; i++)
+    int colBlock[999999];
+    colBlock[0] = -1;
+    int block_index = 0;
+    for (int i = 0; i < neighbour_number[col]; i++)
     {
-        for (int j = i + 1; j < 4400; j++)
+        for (int x = 1; neighbours[col][i][x] > 0; x++)
         {
-            if (isBlock(i, j, -1, -1, col) == 1)
+            for (int y = x + 1; neighbours[col][i][y] > 0; y++)
             {
-                // printf("%d,%d\n", i, j);
-                for (int m = j + 1; m < 4400; m++)
+                for (int z = y + 1; neighbours[col][i][z] > 0; z++)
                 {
-                    if (isBlock(i, j, m, -1, col) == 1)
-                    {
-                        // printf("%d,%d,%d\n", i, j, m);
-                        for (int n = m + 1; n < 4400; n++)
-                        {
-                            if (isBlock(i, j, m, n, col) == 1)
-                            {
-                                // printf("Find block at col %d: %d, %d, %d, %d.\n", col, i, j, m, n);
-                                oneColBlock[index] = i;
-                                oneColBlock[index + 1] = j;
-                                oneColBlock[index + 2] = m;
-                                oneColBlock[index + 3] = n;
-                                index += 4;
-                            }
-                        }
-                    }
+                    colBlock[4 * block_index] = neighbours[col][i][0];
+                    colBlock[4 * block_index + 1] = neighbours[col][i][x];
+                    colBlock[4 * block_index + 2] = neighbours[col][i][y];
+                    colBlock[4 * block_index + 3] = neighbours[col][i][z];
+                    block_index += 1;
                 }
             }
         }
     }
-    if (index > 0)
+    if (neighbour_number[col] > 0)
     {
-        block_number[col] = index / 4;
-        fprintf(fp, "Col %d has blocks number: %d, get by thread %d.\n", col, block_number[col], omp_get_thread_num());
-        printf("Col %d has blocks number: %d, get by thread %d.\n", col, block_number[col], omp_get_thread_num());
+        blocks[col] = colBlock;
+        block_number[col] = block_index;
+        printf("Col %d generate blocks %d\n", col, block_index);
     }
 }
-int isBlock(int i, int j, int m, int n, int col)
+
+int isNeighbour(int i, int j, int col)
 {
     // check if two elements are neighbours
-    double oneBlock[4] = {-1.0, -1.0, -1.0, -1.0};
-    oneBlock[0] = data[col][i];
-    oneBlock[1] = data[col][j];
-    if (m >= 0)
-        oneBlock[2] = data[col][m];
-    if (n >= 0)
-        oneBlock[3] = data[col][n];
-    double min = oneBlock[0];
-    double max = oneBlock[0];
-    for (int i = 1; i < 4; i++)
+    if (data[col][i] >= data[col][j])
     {
-        if (oneBlock[i] > -0.1)
-        {
-            if (min > oneBlock[i])
-            {
-                min = oneBlock[i];
-            }
-            if (max < oneBlock[i])
-            {
-                max = oneBlock[i];
-            }
-        }
+        if ((data[col][i] - data[col][j]) < dia / 2)
+            return 1;
     }
-    if (max - min < dia)
-        return 1;
     else
-        return 0;
+    {
+        if ((data[col][j] - data[col][i]) < dia / 2)
+            return 1;
+    }
+    return 0;
 }
 
 int compFunc(const void *a, const void *b)
@@ -245,8 +194,6 @@ void readData()
 
     while ((read = getline(&line, &len, fp)) != -1)
     {
-        // printf("Retrieved line of length %zu :\n", read);
-        // printf("%s", line);
         char *pch;
         column_index = 0;
         pch = strtok(line, " ,");
@@ -279,8 +226,6 @@ void readKeys()
 
     while ((read = getline(&line, &len, fp)) != -1)
     {
-        // printf("Retrieved line of length %zu :\n", read);
-        // printf("%s", line);
         char *pch;
         pch = strtok(line, " ,");
         while (pch != NULL)
@@ -304,7 +249,3 @@ void printCol(int col)
         printf("Row %d, value %f\n", i, data[col][i]);
     }
 }
-
-// void writeToFile(char file_name){
-
-// }

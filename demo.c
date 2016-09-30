@@ -8,10 +8,11 @@ int isNeighbour(double oneBlock[]);
 
 int main() {
    FILE *fp;
-
-   fp = fopen("./test.txt", "w+");
-   fprintf(fp, "This is testing for fprintf,%d...\n",10);
-   fclose(fp);
+   double x=0.1000001;
+    double y=0.10000060;
+   double mo=0.0000005;
+   if(y-x<dia/2) printf("yes");
+   else printf("no");
    return 0;
 }
 
