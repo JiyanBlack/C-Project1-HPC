@@ -3,17 +3,32 @@
 #include <stdlib.h>
 #include <string.h>
 static double dia = 0.000001;
-
+void giveValue(int col);
 int isNeighbour(double oneBlock[]);
+int *demo[10]; //blocks[col][array of the rows, e.g:"1 6 7 9","2 4 8 19"]
+int main()
+{
+    for (int i = 0; i < 10; i++)
+    {
+        giveValue(i);
+    }
+    int originA = *(demo[0] + 2);
+    int originB = *(demo[0] + 4);
+    int temp = *(demo[0] + 2);
 
-int main() {
-   FILE *fp;
-   double x=0.1000001;
-    double y=0.10000060;
-   double mo=0.0000005;
-   if(y-x<dia/2) printf("yes");
-   else printf("no");
-   return 0;
+    demo[0][2] = *(demo[0] + 4);
+    demo[0][4] = temp;
+    printf("%d,%d\n%d,%d\n", originA, originB,*(demo[0] + 2),*(demo[0] + 4));
+}
+
+void giveValue(int col)
+{
+    int array[10];
+    for (int i = 0; i < 10; i++)
+    {
+        array[i] = i;
+    }
+    demo[col] = array;
 }
 
 int isNeighbour(double oneBlock[])
