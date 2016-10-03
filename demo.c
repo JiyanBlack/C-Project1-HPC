@@ -5,28 +5,27 @@
 static double dia = 0.000001;
 void giveValue(int col);
 int isNeighbour(double oneBlock[]);
-int *demo[10]; //blocks[col][array of the rows, e.g:"1 6 7 9","2 4 8 19"]
+long *demo[10]; //blocks[col][array of the rows, e.g:"1 6 7 9","2 4 8 19"]
 int main()
 {
     for (int i = 0; i < 10; i++)
     {
         giveValue(i);
+        printf("%ld,%ld,%ld,%ld\n", *(demo[i] + 0), *(demo[i]), *(demo[i] + 2), *(demo[i] + 3));
     }
-    int originA = *(demo[0] + 2);
-    int originB = *(demo[0] + 4);
-    int temp = *(demo[0] + 2);
+    for (int i = 0; i < 10; i++)
+    {
 
-    demo[0][2] = *(demo[0] + 4);
-    demo[0][4] = temp;
-    printf("%d,%d\n%d,%d\n", originA, originB,*(demo[0] + 2),*(demo[0] + 4));
+        printf("%ld,%ld,%ld,%ld\n", *(demo[i] + 0), *(demo[i]), *(demo[i] + 2), *(demo[i] + 3));
+    }
 }
 
 void giveValue(int col)
 {
-    int array[10];
-    for (int i = 0; i < 10; i++)
+    long array[10];
+    for (long i = 0; i < 10; i++)
     {
-        array[i] = i;
+        array[i] = i + 10;
     }
     demo[col] = array;
 }

@@ -12,37 +12,69 @@ double findMin(double array[4400]);
 int compFunc(const void *a, const void *b);
 void printCol(int col);
 int *intdup(int const *src, size_t len);
-void getNeighbours(int col);
-void calculateSignatures(int col);
-long getSignature(int row1, int row2, int row3, int row4);
-void runBlock();
-void getBlocks499();
-void generateBlocks(int col);
-void detectCollision();
-void recordNeighbours();
-int isSearched(long signature);
-void quicksort(long x[], long first, long last);
+void calcSignatures(int col);
+long getOneSignature(int row1, int row2, int row3, int row4);
+void setSignature(int col, long value, int index);
+long getStartPoint(int col);
+long getSignature(int col, int index);
+void quicksort(long x[], long first, long last, int col);
+
 //setting: provdie the core number of CPU
-static const int core_number = 8;
+static const int core_number = 4;
 
 //static data structures
 static double data[500][4400];
 static long keys[4400];
 static const double dia = 0.000001;
-static long *signatures[500];
-static long signature_number[500] = {0};
-static int *signatures_one[500];
-static int *signatures_two[500];
-static int *signatures_three[500];
-static int *signatures_four[500];
+static long *signatures = new long[29327137];
+static long signature_number[500] = {5, 0, 0, 0, 0, 1, 0, 50, 0, 0, 1, 1, 0, 2, 2, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 6, 3, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 3, 1, 962, 1, 0, 0, 0, 0, 4, 0, 1, 1, 1, 1, 0, 1, 0, 0, 3, 2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 234, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 33, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 38, 73, 61, 0, 0, 0, 0, 85, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 2, 1, 0, 0, 0, 0, 1, 0, 0, 62, 2, 0, 0, 1, 2, 0, 35, 0, 0, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 28, 92, 0, 1, 1, 0, 1, 0, 0, 0, 16, 0, 2, 1, 0, 0, 0, 1, 0, 1, 2, 0, 0, 0, 1, 4, 1, 0, 0, 0, 0, 1, 2, 1, 1, 0, 0, 0, 1, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 1268, 0, 1, 0, 69, 0, 0, 28, 1, 0, 0, 0, 5, 0, 2, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 5, 0, 0, 0, 2, 0, 0, 0, 1, 1, 0, 0, 0, 168, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 72, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 1, 1, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 31, 0, 0, 4, 0, 9, 0, 1, 1, 0, 0, 0, 1, 5, 0, 37, 0, 350, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1553, 1, 0, 0, 0, 0, 3, 0, 1, 3, 0, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0, 158, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 17, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 2, 1, 0, 0, 0, 1, 0, 0, 29321366};
+static long filled_signature[500] = {0};
+static int *signatures_one = new int[29327137];
+static int *signatures_two = new int[29327137];
+static int *signatures_three = new int[29327137];
+static int *signatures_four = new int[29327137];
 static long final_result[500]; //final resulti of the combination of row
 static int total_col_has_neighbours = 0;
-static long *finished_signatures = new long[30000000];
+static long total_block_number = 0;
 
 // fprintf(fp, "This is testing for fprintf,%d...\n", 10);
 static FILE *result_txt;
 static FILE *log_txt;
 static FILE *neighbours_txt;
+
+void setSignature(int col, int index, long value, int one, int two, int three, int four)
+{
+    long start = getStartPoint(col);
+    if (index == -1) //means add a new value
+    {
+        signatures[start + filled_signature[col]] = value;
+        signatures_one[start + filled_signature[col]] = one;
+        signatures_two[start + filled_signature[col]] = two;
+        signatures_three[start + filled_signature[col]] = three;
+        signatures_four[start + filled_signature[col]] = four;
+        filled_signature[col] = filled_signature[col] + 1;
+    }
+    else
+    { //change an exist value
+        signatures[start + index] = value;
+        signatures_one[start + index] = one;
+        signatures_two[start + index] = two;
+        signatures_three[start + index] = three;
+        signatures_four[start + index] = four;
+    }
+    // printf("For col %d get start point %ld,setting to %ld,filled signatures is %ld\n", col, start, value, filled_signature[col]);
+}
+
+long getStartPoint(int col)
+{
+    long result = 0;
+    for (int i = 0; i < col; i++)
+    {
+        result += signature_number[i];
+    }
+
+    return result;
+}
 
 int main(void)
 {
@@ -54,37 +86,52 @@ int main(void)
     readData();
     readKeys();
     omp_set_num_threads(core_number);
+    int interval = (int)(498 / core_number) + 1;
 #pragma omp parallel
     {
-#pragma omp for
-        for (int col = 499; col > 498; col--)
+
+        printf("%d",omp_get_thread_num());
+        if (omp_get_thread_num() == core_number - 1)
         {
-            getNeighbours(col);
+            calcSignatures(499);
+            quicksort(signatures, getStartPoint(499), signature_number[499] - 1, 499);
         }
-    }
-    quicksort(signatures[499], 0, signature_number[499]);
-    printf("Total %d columns that have neighbours\n", total_col_has_neighbours);
-#pragma omp parallel
-    {
-#pragma omp for
-        for (int col = 0; col < 499; col++)
+        else
         {
-            for (long index = 0; index < signature_number[col]; index++)
+            for (int col = 498; col >= 0; col--)
             {
-                long target_signature = *(signatures[col] + index);
-                for (int col2 = col + 1; col2 < 499; col2++)
+                if ((col >= omp_get_thread_num() * interval) && (col <= (omp_get_thread_num() + 1) * interval))
                 {
-                    for (long index2 = 0; index2 < signature_number[col2]; index2++)
-                    {
-                        long compared_signature = *(signatures[col2] + index2);
-                        if (target_signature == compared_signature)
-                        {
-                            // printf("col %d and %d has collision: %ld, %ld\n", col, col2, target_signature, compared_signature);
-                        }
-                    }
+                    calcSignatures(col);
+                    quicksort(signatures, getStartPoint(col), signature_number[col] - 1, col);
                 }
             }
         }
+    }
+    printf("%d columns have blocks, total block number is %ld\n", total_col_has_neighbours, total_block_number);
+#pragma omp parallel
+    {
+        // #pragma omp for
+        // for (int col = 0; col < 500; col++)
+        // {
+        //     for (long index = 0; index < signature_number[col]; index++)
+        //     {
+        //         long target_signature = *(signatures[col] + index);
+        //         for (int col2 = col + 1; col2 < 500; col2++)
+        //         {
+        //             for (long index2 = 0; index2 < signature_number[col2]; index2++)
+        //             {
+        //                 long compared_signature = *(signatures[col2] + index2);
+        //                 if (compared_signature > target_signature)
+        //                     break;
+        //                 if (target_signature == compared_signature)
+        //                 {
+        //                     printf("col %d and %d has collision: %ld, %ld\n", col, col2, target_signature, compared_signature);
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
     }
     fclose(result_txt);
     fclose(log_txt);
@@ -92,7 +139,7 @@ int main(void)
 }
 
 //quickSort in C:
-void quicksort(long x[], long first, long last)
+void quicksort(long x[], long first, long last, int col)
 {
     // printf("sorting");
     long pivot, j, temp, i, tempone, temptwo, tempthree, tempfour;
@@ -109,75 +156,52 @@ void quicksort(long x[], long first, long last)
                 j--;
             if (i < j)
             {
-                tempone = *(signatures_one[499] + i);
-                temptwo = *(signatures_two[499] + i);
-                tempthree = *(signatures_three[499] + i);
-                tempfour = *(signatures_four[499] + i);
                 temp = x[i];
-                signatures_one[499][i] = signatures_one[499][j];
-                signatures_two[499][i] = signatures_two[499][j];
-                signatures_three[499][i] = signatures_three[499][j];
-                signatures_four[499][i] = signatures_four[499][j];
+                tempone = signatures_one[i];
+                temptwo = signatures_two[i];
+                tempthree = signatures_three[i];
+                tempfour = signatures_four[i];
                 x[i] = x[j];
-                signatures_one[499][j] = tempone;
-                signatures_two[499][j] = temptwo;
-                signatures_three[499][j] = tempthree;
-                signatures_four[499][j] = tempfour;
+                signatures_one[i] = signatures_one[j];
+                signatures_two[i] = signatures_two[j];
+                signatures_three[i] = signatures_three[j];
+                signatures_four[i] = signatures_four[j];
                 x[j] = temp;
+                signatures_one[j] = tempone;
+                signatures_two[j] = temptwo;
+                signatures_three[j] = tempthree;
+                signatures_four[j] = tempfour;
             }
         }
-        tempone = *(signatures_one[499] + pivot);
-        temptwo = *(signatures_two[499] + pivot);
-        tempthree = *(signatures_three[499] + pivot);
-        tempfour = *(signatures_four[499] + pivot);
         temp = x[pivot];
-        signatures_one[499][pivot] = signatures_one[499][j];
-        signatures_two[499][pivot] = signatures_two[499][j];
-        signatures_three[499][pivot] = signatures_three[499][j];
-        signatures_four[499][pivot] = signatures_four[499][j];
+        tempone = signatures_one[pivot];
+        temptwo = signatures_two[pivot];
+        tempthree = signatures_three[pivot];
+        tempfour = signatures_four[pivot];
+        signatures_one[pivot] = signatures_one[j];
+        signatures_two[pivot] = signatures_two[j];
+        signatures_three[pivot] = signatures_three[j];
+        signatures_four[pivot] = signatures_four[j];
         x[pivot] = x[j];
-        signatures_one[499][j] = tempone;
-        signatures_two[499][j] = temptwo;
-        signatures_three[499][j] = tempthree;
-        signatures_four[499][j] = tempfour;
+        signatures_one[j] = tempone;
+        signatures_two[j] = temptwo;
+        signatures_three[j] = tempthree;
+        signatures_four[j] = tempfour;
         x[j] = temp;
-        quicksort(x, first, j - 1);
-        quicksort(x, j + 1, last);
+        quicksort(x, first, j - 1, col);
+        quicksort(x, j + 1, last, col);
     }
 }
 
-int isSearched(long signature)
-{
-    for (long i = 0; i < 30000000; i++)
-    {
-        if (finished_signatures[i] == signature)
-        {
-            return 1;
-        }
-        if (finished_signatures[i] < 100000)
-        {
-            break;
-        }
-    }
-    return 0;
-}
-
-long getSignature(int row1, int row2, int row3, int row4)
+long getOneSignature(int row1, int row2, int row3, int row4)
 {
     return keys[row1] + keys[row2] + keys[row3] + keys[row4];
 }
 
-void getNeighbours(int col)
+void calcSignatures(int col)
 {
     //generate neighbours for each row in each col
-    int col_blocks[9000];
     int col_neighbours[4400][200];
-    long *col_signatures = new long[30000000];
-    int *col_signatures_one = new int[30000000];
-    int *col_signatures_two = new int[30000000];
-    int *col_signatures_three = new int[30000000];
-    int *col_signatures_four = new int[30000000];
-
     int exist_neighbours = 0;
     for (int row = 0; row < 4400; row++)
     {
@@ -205,46 +229,32 @@ void getNeighbours(int col)
             // printf("Col %d row %d find neighbours %d\n", col, row, index);
         }
     }
+    int index = 0;
     if (exist_neighbours == 1)
     {
         total_col_has_neighbours += 1;
-        int index = 0;
         for (int row = 0; row < 4400; row++)
         {
             if (col_neighbours[row][0] >= 0)
             {
                 for (int x = 0; col_neighbours[row][x] > 0; x++)
                 {
-                    if (col_neighbours[row][x] < 0)
-                        break;
                     for (int y = x + 1; col_neighbours[row][y] > 0; y++)
                     {
-                        if (col_neighbours[row][y] < 0)
-                            break;
                         for (int z = y + 1; col_neighbours[row][z] > 0; z++)
                         {
-                            if (col_neighbours[row][z] < 0)
-                                break;
-                            long singature = getSignature(row, col_neighbours[row][x], col_neighbours[row][y], col_neighbours[row][z]);
-                            col_signatures[index] = singature;
-                            col_signatures_one[index] = row;
-                            col_signatures_two[index] = col_neighbours[row][x];
-                            col_signatures_three[index] = col_neighbours[row][y];
-                            col_signatures_four[index] = col_neighbours[row][z];
+                            long signature = getOneSignature(row, col_neighbours[row][x], col_neighbours[row][y], col_neighbours[row][z]);
+                            setSignature(col, -1, signature, row, col_neighbours[row][x], col_neighbours[row][y], col_neighbours[row][z]);
                             index += 1;
+                            total_block_number += 1;
                         }
                     }
                 }
             }
         }
-        signature_number[col] = index;
         printf("Col %d has blocks %d\n", col, index);
     }
-    signatures[col] = col_signatures;
-    signatures_one[col]=col_signatures_one;
-    signatures_two[col]=col_signatures_two;
-    signatures_three[col]=col_signatures_three;
-    signatures_four[col]=col_signatures_four;
+    signature_number[col] = index;
 }
 
 int isNeighbour(int i, int j, int col)
