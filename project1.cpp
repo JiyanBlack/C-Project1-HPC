@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <omp.h>
+#define length_of_arrays 30000000
 
 //setting: provdie the core number of CPU
 static const int core_number = 8;
@@ -27,7 +28,6 @@ void quicksort(long x[], long first, long last);
 void allocateMemory(int col);
 
 //static data structures
-static const int length_of_arrays=30000000;            //the length of the signatures array
 static double data[500][4400];                    //original data
 static long keys[4400];                           //the keys of each row
 static const double dia = 0.000001;               // dia
