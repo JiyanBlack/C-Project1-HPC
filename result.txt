@@ -1,0 +1,428 @@
+Signature 87931962248894 -- block: M268 ,M800, M1009, M1121 -- collisions in columns: 423 90 
+Signature 97781234922743 -- block: M268 ,M800, M1121, M1286 -- collisions in columns: 332 423 
+Signature 105555033386930 -- block: M565 ,M1776, M2075, M2801 -- collisions in columns: 90 423 
+Signature 107694547224118 -- block: M1109 ,M1616, M1686, M4084 -- collisions in columns: 404 423 
+Signature 109568887429863 -- block: M925 ,M1678, M2159, M2485 -- collisions in columns: 404 283 
+Signature 113008611600574 -- block: M650 ,M2207, M2374, M3566 -- collisions in columns: 404 423 
+Signature 116653237100690 -- block: M4 ,M1960, M2061, M3701 -- collisions in columns: 276 423 
+Signature 116700877166938 -- block: M1000 ,M2726, M2952, M4059 -- collisions in columns: 445 280 423 
+Signature 117853458296590 -- block: M388 ,M444, M1706, M3724 -- collisions in columns: 90 423 
+Signature 118608598467204 -- block: M510 ,M2235, M3683, M4166 -- collisions in columns: 228 332 
+Signature 122108054030331 -- block: M4 ,M447, M2061, M3701 -- collisions in columns: 228 276 423 
+Signature 123180316167841 -- block: M510 ,M688, M2235, M4166 -- collisions in columns: 90 228 
+Signature 123741864959086 -- block: M268 ,M1121, M1286, M3086 -- collisions in columns: 276 168 423 
+Signature 125970838220956 -- block: M52 ,M1205, M1368, M1782 -- collisions in columns: 228 423 
+Signature 128046353532331 -- block: M224 ,M3955, M4002, M4194 -- collisions in columns: 423 276 
+Signature 129501149580239 -- block: M388 ,M444, M1706, M2195 -- collisions in columns: 423 90 
+Signature 133052091672872 -- block: M313 ,M610, M1360, M3199 -- collisions in columns: 387 423 
+Signature 135234997460942 -- block: M688 ,M2235, M3683, M4166 -- collisions in columns: 228 280 
+Signature 135850908635316 -- block: M487 ,M1073, M1845, M2762 -- collisions in columns: 90 276 
+Signature 138192270769162 -- block: M224 ,M3955, M4002, M4255 -- collisions in columns: 276 423 
+Signature 138497871393827 -- block: M829 ,M1011, M2461, M2588 -- collisions in columns: 90 166 
+Signature 138691803333595 -- block: M889 ,M1981, M2626, M3939 -- collisions in columns: 423 90 
+Signature 139576665519488 -- block: M224 ,M4002, M4194, M4255 -- collisions in columns: 423 276 
+Signature 142158216320125 -- block: M252 ,M985, M2663, M3999 -- collisions in columns: 39 445 
+Signature 142446014033511 -- block: M268 ,M709, M800, M1009 -- collisions in columns: 423 90 
+Signature 142687835459332 -- block: M752 ,M1837, M3159, M4307 -- collisions in columns: 90 404 
+Signature 144699322155720 -- block: M536 ,M1864, M2072, M2172 -- collisions in columns: 90 239 
+Signature 144988221704208 -- block: M2624 ,M2743, M4097, M4233 -- collisions in columns: 173 90 
+Signature 145682958338998 -- block: M444 ,M1706, M2195, M3724 -- collisions in columns: 90 423 
+Signature 147877947477324 -- block: M447 ,M1960, M2061, M3701 -- collisions in columns: 276 423 
+Signature 151545987363808 -- block: M4 ,M447, M1960, M3701 -- collisions in columns: 423 276 
+Signature 152270841624087 -- block: M853 ,M1268, M1589, M1900 -- collisions in columns: 166 90 
+Signature 152295286707360 -- block: M268 ,M709, M800, M1286 -- collisions in columns: 332 423 
+Signature 154629636015131 -- block: M600 ,M2058, M3027, M3886 -- collisions in columns: 90 423 
+Signature 154838537180901 -- block: M605 ,M874, M3024, M4325 -- collisions in columns: 404 423 402 
+Signature 155303184078791 -- block: M4 ,M447, M1960, M2061 -- collisions in columns: 276 402 423 
+Signature 155332930076825 -- block: M3955 ,M4002, M4194, M4255 -- collisions in columns: 276 423 
+Signature 157607957705217 -- block: M650 ,M1478, M2207, M2374 -- collisions in columns: 404 154 
+Signature 157829342799396 -- block: M218 ,M2421, M2465, M3166 -- collisions in columns: 90 404 
+Signature 157944075641500 -- block: M1091 ,M3070, M3630, M3979 -- collisions in columns: 423 90 
+Signature 158015759072911 -- block: M2743 ,M3139, M4097, M4233 -- collisions in columns: 168 276 
+Signature 158958400388845 -- block: M489 ,M811, M882, M2867 -- collisions in columns: 423 154 
+Signature 160254149157681 -- block: M2483 ,M2713, M4033, M4269 -- collisions in columns: 198 332 
+Signature 160668213089494 -- block: M224 ,M3955, M4194, M4255 -- collisions in columns: 423 276 
+Signature 160742632163077 -- block: M177 ,M569, M1739, M3101 -- collisions in columns: 90 423 
+Signature 162946358988503 -- block: M1145 ,M2785, M2792, M3128 -- collisions in columns: 90 404 
+Signature 163638588362255 -- block: M1004 ,M1954, M4193, M4215 -- collisions in columns: 228 7 
+Signature 163647788871430 -- block: M87 ,M1912, M3062, M3789 -- collisions in columns: 276 90 
+Signature 164029530440561 -- block: M1260 ,M1566, M2531, M3703 -- collisions in columns: 154 276 228 
+Signature 164580839006851 -- block: M1279 ,M1402, M2505, M3965 -- collisions in columns: 332 307 
+Signature 164645761159486 -- block: M268 ,M709, M1009, M1121 -- collisions in columns: 423 90 
+Signature 164832389831750 -- block: M933 ,M3418, M4187, M4397 -- collisions in columns: 423 189 
+Signature 165016031438934 -- block: M388 ,M1706, M2195, M3724 -- collisions in columns: 423 90 
+Signature 165154220717278 -- block: M709 ,M800, M1009, M1121 -- collisions in columns: 90 423 
+Signature 165271940565154 -- block: M252 ,M985, M3999, M4027 -- collisions in columns: 445 90 
+Signature 165775320591930 -- block: M905 ,M1112, M1398, M3953 -- collisions in columns: 404 423 
+Signature 166765378594450 -- block: M1091 ,M3070, M3233, M3630 -- collisions in columns: 423 445 
+Signature 167578397032950 -- block: M621 ,M1114, M2757, M3581 -- collisions in columns: 423 276 
+Signature 167746310234311 -- block: M724 ,M2099, M2791, M3910 -- collisions in columns: 392 276 
+Signature 167819197763206 -- block: M1531 ,M2266, M2621, M3604 -- collisions in columns: 276 283 
+Signature 168033017137246 -- block: M2071 ,M2436, M2511, M3464 -- collisions in columns: 90 276 
+Signature 168103798064821 -- block: M1032 ,M1678, M2159, M2485 -- collisions in columns: 404 90 
+Signature 169412081893570 -- block: M173 ,M600, M2058, M3886 -- collisions in columns: 39 90 404 423 
+Signature 170314186061675 -- block: M388 ,M444, M2195, M3724 -- collisions in columns: 90 423 
+Signature 170316161424495 -- block: M73 ,M514, M1533, M2310 -- collisions in columns: 227 90 
+Signature 170614637032339 -- block: M268 ,M709, M800, M1121 -- collisions in columns: 332 423 90 
+Signature 170784334267928 -- block: M2197 ,M3070, M3630, M3979 -- collisions in columns: 205 402 
+Signature 171002713319287 -- block: M565 ,M1095, M2075, M2801 -- collisions in columns: 423 387 404 
+Signature 172425850156799 -- block: M1505 ,M2398, M2403, M2700 -- collisions in columns: 168 283 423 
+Signature 172723174872838 -- block: M2071 ,M2436, M2890, M3464 -- collisions in columns: 404 39 90 
+Signature 174495033833335 -- block: M268 ,M709, M1121, M1286 -- collisions in columns: 332 423 168 
+Signature 174502348131622 -- block: M2280 ,M3418, M4158, M4397 -- collisions in columns: 228 423 
+Signature 174904118359370 -- block: M273 ,M1841, M3987, M4190 -- collisions in columns: 168 387 
+Signature 175003493391127 -- block: M709 ,M800, M1121, M1286 -- collisions in columns: 423 332 
+Signature 175353898328013 -- block: M1505 ,M2398, M2700, M3314 -- collisions in columns: 198 166 
+Signature 175515338640678 -- block: M36 ,M1239, M1474, M2945 -- collisions in columns: 332 228 
+Signature 175753714283313 -- block: M839 ,M2225, M3692, M3895 -- collisions in columns: 423 90 
+Signature 176963072853004 -- block: M911 ,M1023, M1279, M1402 -- collisions in columns: 90 423 
+Signature 178255916743703 -- block: M268 ,M709, M1286, M3086 -- collisions in columns: 423 168 
+Signature 179662613990351 -- block: M650 ,M1760, M2207, M2374 -- collisions in columns: 154 423 
+Signature 180339899279051 -- block: M358 ,M1566, M2531, M3703 -- collisions in columns: 276 154 
+Signature 181929307615666 -- block: M494 ,M2200, M3856, M4159 -- collisions in columns: 90 205 
+Signature 182682003689293 -- block: M3418 ,M4158, M4187, M4397 -- collisions in columns: 423 228 
+Signature 182895191987545 -- block: M73 ,M908, M1533, M2310 -- collisions in columns: 90 387 
+Signature 183943579001065 -- block: M636 ,M910, M1684, M3764 -- collisions in columns: 276 7 
+Signature 183978403526310 -- block: M2403 ,M2700, M3314, M3655 -- collisions in columns: 276 173 90 
+Signature 184630581634464 -- block: M926 ,M1260, M2531, M3703 -- collisions in columns: 90 276 
+Signature 184921585758774 -- block: M1531 ,M2291, M2621, M3604 -- collisions in columns: 173 283 445 
+Signature 184942184373859 -- block: M210 ,M1970, M2612, M3698 -- collisions in columns: 205 423 
+Signature 185077155175910 -- block: M252 ,M985, M2663, M4027 -- collisions in columns: 445 276 
+Signature 185139842551908 -- block: M358 ,M1260, M2531, M3703 -- collisions in columns: 154 88 90 276 
+Signature 185528017965641 -- block: M1112 ,M1398, M2199, M3953 -- collisions in columns: 283 423 
+Signature 186132296576542 -- block: M536 ,M2072, M2172, M3541 -- collisions in columns: 90 404 
+Signature 186875203149943 -- block: M974 ,M2743, M3139, M4233 -- collisions in columns: 276 404 
+Signature 188292419079670 -- block: M839 ,M840, M3692, M3895 -- collisions in columns: 445 90 423 
+Signature 189614388945512 -- block: M1038 ,M1858, M2350, M2955 -- collisions in columns: 404 228 
+Signature 189800236299893 -- block: M514 ,M1679, M2310, M2517 -- collisions in columns: 423 90 
+Signature 189818329686484 -- block: M3129 ,M3552, M4184, M4297 -- collisions in columns: 423 404 
+Signature 190459527375840 -- block: M73 ,M1533, M1679, M2517 -- collisions in columns: 90 288 
+Signature 190604147438631 -- block: M73 ,M514, M1679, M2517 -- collisions in columns: 357 90 
+Signature 190942849668914 -- block: M303 ,M829, M1011, M2461 -- collisions in columns: 90 166 
+Signature 191590429059250 -- block: M839 ,M1526, M2225, M3692 -- collisions in columns: 423 228 
+Signature 191766047222909 -- block: M358 ,M1260, M1566, M3703 -- collisions in columns: 276 357 154 
+Signature 191870521813435 -- block: M303 ,M1011, M2461, M2588 -- collisions in columns: 166 90 
+Signature 191933750068207 -- block: M173 ,M2058, M3027, M3886 -- collisions in columns: 90 423 283 
+Signature 192358783439666 -- block: M312 ,M711, M1433, M3457 -- collisions in columns: 332 7 
+Signature 193064281175299 -- block: M73 ,M1533, M1938, M2517 -- collisions in columns: 288 280 
+Signature 193382254560589 -- block: M173 ,M600, M2058, M3027 -- collisions in columns: 423 90 
+Signature 193742136425678 -- block: M1011 ,M1339, M2461, M2588 -- collisions in columns: 423 402 
+Signature 194019204102811 -- block: M1100 ,M1138, M2268, M3894 -- collisions in columns: 198 276 
+Signature 194879460932910 -- block: M1991 ,M3035, M3353, M3894 -- collisions in columns: 252 423 
+Signature 196575267068682 -- block: M268 ,M709, M1121, M3086 -- collisions in columns: 423 404 168 
+Signature 196761976887879 -- block: M223 ,M3786, M4370, M4374 -- collisions in columns: 173 90 404 
+Signature 197543785860645 -- block: M217 ,M497, M805, M1668 -- collisions in columns: 276 423 
+Signature 197844348040086 -- block: M85 ,M983, M1854, M2428 -- collisions in columns: 154 423 
+Signature 198445369156874 -- block: M170 ,M909, M2224, M3212 -- collisions in columns: 332 404 
+Signature 198733407238436 -- block: M229 ,M362, M3177, M3383 -- collisions in columns: 404 90 
+Signature 199288375020892 -- block: M1970 ,M2344, M2612, M3698 -- collisions in columns: 423 90 
+Signature 199420871675595 -- block: M555 ,M2609, M3272, M4286 -- collisions in columns: 228 7 
+Signature 199701366120700 -- block: M2647 ,M2866, M4107, M4283 -- collisions in columns: 404 280 276 
+Signature 199803415608956 -- block: M873 ,M1672, M2085, M2687 -- collisions in columns: 423 90 
+Signature 199841585753901 -- block: M1240 ,M2405, M2761, M2970 -- collisions in columns: 404 90 
+Signature 200285776322122 -- block: M38 ,M1240, M2970, M3058 -- collisions in columns: 283 423 
+Signature 200518330179814 -- block: M547 ,M2099, M2791, M3910 -- collisions in columns: 276 423 
+Signature 200940950472954 -- block: M358 ,M926, M2531, M3703 -- collisions in columns: 276 90 
+Signature 200964123427470 -- block: M709 ,M1121, M1286, M3086 -- collisions in columns: 168 423 
+Signature 201698174149303 -- block: M655 ,M1219, M3137, M3640 -- collisions in columns: 404 276 
+Signature 201812989126580 -- block: M360 ,M537, M2471, M4354 -- collisions in columns: 205 198 90 
+Signature 201860356703074 -- block: M336 ,M1649, M2522, M4321 -- collisions in columns: 276 90 
+Signature 202103751815022 -- block: M1236 ,M2005, M3573, M4369 -- collisions in columns: 423 228 
+Signature 202379266862943 -- block: M908 ,M1679, M2310, M2517 -- collisions in columns: 423 90 
+Signature 202789922029530 -- block: M991 ,M1153, M1889, M2359 -- collisions in columns: 332 90 
+Signature 202847651093571 -- block: M405 ,M650, M1760, M2207 -- collisions in columns: 7 423 
+Signature 202950352691356 -- block: M368 ,M3009, M3326, M3486 -- collisions in columns: 198 90 
+Signature 203217862283917 -- block: M1505 ,M2403, M2700, M3314 -- collisions in columns: 173 90 
+Signature 203529984866304 -- block: M1236 ,M2005, M2877, M4369 -- collisions in columns: 423 445 
+Signature 203740098017491 -- block: M905 ,M1112, M2199, M3953 -- collisions in columns: 423 392 
+Signature 204033576265906 -- block: M303 ,M829, M1011, M2588 -- collisions in columns: 90 166 
+Signature 204604712179550 -- block: M1077 ,M1218, M1386, M3880 -- collisions in columns: 423 90 228 
+Signature 204837476366395 -- block: M567 ,M2938, M3179, M4260 -- collisions in columns: 90 423 
+Signature 206044912725554 -- block: M860 ,M2536, M3957, M4145 -- collisions in columns: 404 90 
+Signature 206059037436094 -- block: M890 ,M1027, M2307, M4298 -- collisions in columns: 173 7 
+Signature 206410254744817 -- block: M860 ,M2536, M3652, M3957 -- collisions in columns: 276 90 
+Signature 207567155143955 -- block: M358 ,M926, M1566, M3703 -- collisions in columns: 173 276 
+Signature 207780472660209 -- block: M873 ,M2085, M2662, M2687 -- collisions in columns: 423 90 
+Signature 208693268847732 -- block: M73 ,M514, M1533, M1679 -- collisions in columns: 404 90 198 
+Signature 209369048554831 -- block: M229 ,M2190, M3177, M3383 -- collisions in columns: 404 90 
+Signature 210215389010232 -- block: M974 ,M1705, M2318, M3918 -- collisions in columns: 90 423 
+Signature 210285711226179 -- block: M386 ,M492, M2270, M4064 -- collisions in columns: 445 90 
+Signature 210864882641601 -- block: M150 ,M228, M1591, M2649 -- collisions in columns: 423 90 
+Signature 211243509001680 -- block: M145 ,M351, M968, M2080 -- collisions in columns: 90 402 
+Signature 211298022647191 -- block: M73 ,M514, M1533, M1938 -- collisions in columns: 227 228 
+Signature 211332215091503 -- block: M1419 ,M2665, M2916, M3408 -- collisions in columns: 357 276 
+Signature 211598843200583 -- block: M2403 ,M2700, M3314, M3860 -- collisions in columns: 90 276 
+Signature 211732542906491 -- block: M2380 ,M2399, M3720, M3757 -- collisions in columns: 90 423 
+Signature 212367098416812 -- block: M358 ,M926, M1260, M3703 -- collisions in columns: 276 90 387 
+Signature 212563275132514 -- block: M1248 ,M2350, M2739, M3310 -- collisions in columns: 90 423 
+Signature 212898230080914 -- block: M2300 ,M2763, M3810, M4373 -- collisions in columns: 90 205 
+Signature 213437526474729 -- block: M655 ,M1219, M1999, M3640 -- collisions in columns: 404 276 
+Signature 213471801070131 -- block: M1008 ,M1105, M1430, M3003 -- collisions in columns: 357 423 
+Signature 214839023975386 -- block: M300 ,M447, M1960, M2061 -- collisions in columns: 90 423 
+Signature 216111731010527 -- block: M1507 ,M1672, M2085, M2687 -- collisions in columns: 90 404 
+Signature 217580313249784 -- block: M447 ,M1960, M2061, M2324 -- collisions in columns: 90 423 
+Signature 217658258264615 -- block: M217 ,M497, M593, M1668 -- collisions in columns: 332 276 
+Signature 218140750183386 -- block: M873 ,M1672, M2085, M2662 -- collisions in columns: 423 90 
+Signature 218292003410633 -- block: M173 ,M600, M3886, M4061 -- collisions in columns: 423 332 
+Signature 218750028196895 -- block: M173 ,M600, M3027, M3886 -- collisions in columns: 90 423 
+Signature 219161526816185 -- block: M2350 ,M2526, M2739, M3310 -- collisions in columns: 90 423 
+Signature 219300845954424 -- block: M1220 ,M1636, M1721, M4231 -- collisions in columns: 228 90 
+Signature 219921816628683 -- block: M266 ,M1551, M1857, M4065 -- collisions in columns: 90 404 
+Signature 220112111472031 -- block: M655 ,M954, M1219, M3640 -- collisions in columns: 404 276 
+Signature 220447197645338 -- block: M303 ,M829, M2461, M2588 -- collisions in columns: 90 166 168 
+Signature 220613008334835 -- block: M514 ,M908, M1679, M2310 -- collisions in columns: 423 90 
+Signature 221634174612979 -- block: M2280 ,M3418, M4158, M4187 -- collisions in columns: 228 423 
+Signature 221878489186993 -- block: M576 ,M991, M1153, M1889 -- collisions in columns: 228 90 
+Signature 222888075013589 -- block: M1322 ,M1446, M1529, M1723 -- collisions in columns: 53 283 
+Signature 223097807534715 -- block: M2280 ,M3418, M4187, M4397 -- collisions in columns: 228 423 
+Signature 223109639408886 -- block: M1556 ,M1638, M2178, M3271 -- collisions in columns: 423 276 
+Signature 223850292208186 -- block: M1071 ,M1562, M1835, M3671 -- collisions in columns: 90 283 166 423 
+Signature 224378318670070 -- block: M1731 ,M2158, M3554, M3738 -- collisions in columns: 283 205 
+Signature 224778456194081 -- block: M1065 ,M1942, M2677, M3975 -- collisions in columns: 90 280 
+Signature 225229317944155 -- block: M926 ,M1260, M1566, M2531 -- collisions in columns: 168 276 
+Signature 225738578861599 -- block: M358 ,M1260, M1566, M2531 -- collisions in columns: 276 154 
+Signature 225843595373306 -- block: M1248 ,M2526, M2739, M3310 -- collisions in columns: 423 90 
+Signature 225887906840769 -- block: M405 ,M1760, M2207, M2374 -- collisions in columns: 90 423 
+Signature 225981342889235 -- block: M2536 ,M3652, M3957, M4145 -- collisions in columns: 90 228 
+Signature 226695886815522 -- block: M514 ,M908, M2310, M2517 -- collisions in columns: 423 90 
+Signature 226774913612486 -- block: M336 ,M1649, M2236, M4321 -- collisions in columns: 332 276 
+Signature 226798177743941 -- block: M1453 ,M1679, M2310, M3847 -- collisions in columns: 276 332 
+Signature 226848691621901 -- block: M615 ,M713, M3205, M3984 -- collisions in columns: 228 7 
+Signature 227801340744954 -- block: M540 ,M636, M1684, M1794 -- collisions in columns: 276 332 
+Signature 227812139878901 -- block: M655 ,M1999, M3137, M3640 -- collisions in columns: 404 276 
+Signature 228470218924423 -- block: M1063 ,M1661, M2796, M3280 -- collisions in columns: 39 276 
+Signature 228845250251830 -- block: M1505 ,M2398, M2700, M3860 -- collisions in columns: 423 166 
+Signature 229088774533461 -- block: M1505 ,M2403, M2700, M3655 -- collisions in columns: 90 173 
+Signature 230005156709775 -- block: M2350 ,M2739, M3310, M4133 -- collisions in columns: 90 423 
+Signature 230161085724571 -- block: M229 ,M362, M2190, M3383 -- collisions in columns: 90 404 
+Signature 230493869092292 -- block: M1065 ,M1897, M1942, M2677 -- collisions in columns: 90 280 
+Signature 230573197412255 -- block: M1248 ,M2350, M2526, M3310 -- collisions in columns: 423 90 
+Signature 230764363701257 -- block: M540 ,M636, M910, M1794 -- collisions in columns: 276 90 
+Signature 231503203472104 -- block: M840 ,M2225, M3692, M3895 -- collisions in columns: 90 423 
+Signature 231990062743194 -- block: M1531 ,M2266, M2291, M2621 -- collisions in columns: 423 283 
+Signature 232016822704675 -- block: M1505 ,M2700, M3314, M3655 -- collisions in columns: 173 404 90 166 
+Signature 232329647487528 -- block: M526 ,M535, M1107, M4221 -- collisions in columns: 228 423 
+Signature 232517998014756 -- block: M450 ,M1701, M2131, M3937 -- collisions in columns: 228 404 
+Signature 233522223847985 -- block: M978 ,M1537, M1697, M3245 -- collisions in columns: 154 423 
+Signature 233692682324256 -- block: M540 ,M636, M1684, M3875 -- collisions in columns: 332 276 
+Signature 233724722180000 -- block: M985 ,M3406, M3999, M4027 -- collisions in columns: 228 90 
+Signature 234486724876203 -- block: M655 ,M954, M3137, M3640 -- collisions in columns: 276 404 
+Signature 234628159571670 -- block: M1755 ,M1841, M3987, M4190 -- collisions in columns: 404 168 
+Signature 234662904994570 -- block: M1065 ,M1897, M2677, M3975 -- collisions in columns: 90 280 
+Signature 234812343138000 -- block: M2033 ,M2088, M2658, M4244 -- collisions in columns: 423 227 
+Signature 235544600840467 -- block: M1347 ,M1562, M1835, M3671 -- collisions in columns: 423 357 
+Signature 236655705280559 -- block: M540 ,M636, M910, M3875 -- collisions in columns: 90 276 
+Signature 236687225266896 -- block: M1248 ,M2739, M3310, M4133 -- collisions in columns: 423 90 
+Signature 236688196901042 -- block: M655 ,M954, M1219, M2841 -- collisions in columns: 90 404 
+Signature 236786169557512 -- block: M1065 ,M1897, M1942, M3975 -- collisions in columns: 90 280 
+Signature 237067254990289 -- block: M1065 ,M1942, M2677, M2790 -- collisions in columns: 90 280 
+Signature 237314375299101 -- block: M1212 ,M1399, M1457, M2102 -- collisions in columns: 90 276 
+Signature 237469755450127 -- block: M2403 ,M2700, M3655, M3860 -- collisions in columns: 276 90 
+Signature 237502346240925 -- block: M237 ,M540, M910, M1703 -- collisions in columns: 90 423 
+Signature 237862148938092 -- block: M1562 ,M1835, M3671, M3898 -- collisions in columns: 90 166 423 
+Signature 238012438509850 -- block: M229 ,M362, M2190, M3177 -- collisions in columns: 404 90 
+Signature 238014623206753 -- block: M231 ,M3574, M3778, M3899 -- collisions in columns: 423 404 
+Signature 238796374113450 -- block: M161 ,M1420, M2024, M2076 -- collisions in columns: 198 228 
+Signature 240018596300074 -- block: M655 ,M954, M2841, M3936 -- collisions in columns: 283 90 423 
+Signature 240120605731275 -- block: M839 ,M840, M2225, M3692 -- collisions in columns: 90 423 
+Signature 240267549702562 -- block: M839 ,M840, M2225, M3895 -- collisions in columns: 90 423 
+Signature 240320820245024 -- block: M881 ,M884, M1553, M3197 -- collisions in columns: 404 90 
+Signature 240397803621341 -- block: M2700 ,M3314, M3655, M3860 -- collisions in columns: 404 166 276 90 
+Signature 240813671585270 -- block: M173 ,M3027, M3886, M4061 -- collisions in columns: 276 423 
+Signature 241153305417299 -- block: M2280 ,M4158, M4187, M4397 -- collisions in columns: 423 228 
+Signature 241200481661259 -- block: M1649 ,M2236, M2522, M4321 -- collisions in columns: 283 276 
+Signature 241236290892567 -- block: M1065 ,M2677, M2790, M3975 -- collisions in columns: 90 280 
+Signature 241416827305845 -- block: M1248 ,M2350, M3310, M4133 -- collisions in columns: 90 423 
+Signature 241433027539097 -- block: M1536 ,M1672, M2085, M2662 -- collisions in columns: 357 90 
+Signature 241539686782645 -- block: M358 ,M926, M1566, M2531 -- collisions in columns: 283 276 
+Signature 241723729080397 -- block: M1786 ,M1908, M2013, M2571 -- collisions in columns: 173 404 
+Signature 241740982106350 -- block: M1212 ,M1399, M1457, M3950 -- collisions in columns: 90 276 
+Signature 242359607821819 -- block: M636 ,M1684, M3764, M3875 -- collisions in columns: 205 276 
+Signature 242811180782005 -- block: M884 ,M1553, M3197, M3751 -- collisions in columns: 404 90 
+Signature 243285476950567 -- block: M2526 ,M2739, M3310, M4133 -- collisions in columns: 90 423 
+Signature 243359555455509 -- block: M1065 ,M1942, M2790, M3975 -- collisions in columns: 90 280 276 
+Signature 243641580428397 -- block: M1219 ,M1999, M3137, M3640 -- collisions in columns: 404 276 
+Signature 244082504496800 -- block: M2426 ,M2902, M3178, M3465 -- collisions in columns: 276 154 
+Signature 244425695308815 -- block: M616 ,M1170, M2269, M4038 -- collisions in columns: 90 423 
+Signature 245588919363361 -- block: M73 ,M514, M908, M1533 -- collisions in columns: 90 228 
+Signature 245720133880854 -- block: M873 ,M1536, M1672, M2662 -- collisions in columns: 90 276 
+Signature 245891442769745 -- block: M300 ,M1960, M2061, M2324 -- collisions in columns: 423 90 
+Signature 246226077201629 -- block: M655 ,M954, M1999, M3640 -- collisions in columns: 276 404 
+Signature 246339630055502 -- block: M358 ,M926, M1260, M2531 -- collisions in columns: 90 276 
+Signature 246666329117535 -- block: M675 ,M1943, M2596, M2811 -- collisions in columns: 227 357 
+Signature 246722264132485 -- block: M881 ,M884, M3197, M3751 -- collisions in columns: 404 90 
+Signature 246951703790778 -- block: M1065 ,M1897, M2677, M2790 -- collisions in columns: 90 280 
+Signature 248015078989516 -- block: M2350 ,M2526, M3310, M4133 -- collisions in columns: 90 423 
+Signature 248029363954757 -- block: M2689 ,M3139, M3235, M4117 -- collisions in columns: 387 423 
+Signature 248055294574129 -- block: M2033 ,M2088, M2980, M4244 -- collisions in columns: 90 423 
+Signature 248801417590435 -- block: M45 ,M159, M2784, M4109 -- collisions in columns: 133 90 
+Signature 248960604118572 -- block: M1505 ,M2398, M2403, M3860 -- collisions in columns: 423 7 
+Signature 249074968353720 -- block: M1065 ,M1897, M1942, M2790 -- collisions in columns: 280 90 228 
+Signature 249152071914371 -- block: M208 ,M342, M1607, M2497 -- collisions in columns: 276 90 
+Signature 249622108907622 -- block: M431 ,M1158, M1163, M1750 -- collisions in columns: 332 402 
+Signature 249763152980423 -- block: M237 ,M540, M910, M3875 -- collisions in columns: 90 423 
+Signature 250316165425699 -- block: M954 ,M1219, M3137, M3640 -- collisions in columns: 404 276 
+Signature 251062810305214 -- block: M655 ,M954, M2841, M3137 -- collisions in columns: 423 404 
+Signature 251111380936718 -- block: M509 ,M1667, M2480, M2794 -- collisions in columns: 423 90 
+Signature 251346259699386 -- block: M300 ,M447, M2061, M2324 -- collisions in columns: 423 90 
+Signature 251888652289786 -- block: M1505 ,M2398, M3314, M3860 -- collisions in columns: 166 7 
+Signature 251948624085948 -- block: M2238 ,M2758, M3512, M3675 -- collisions in columns: 90 276 
+Signature 252132176571417 -- block: M1505 ,M2403, M3314, M3655 -- collisions in columns: 173 90 
+Signature 253244004255998 -- block: M1065 ,M1897, M2790, M3975 -- collisions in columns: 90 280 
+Signature 253664909636693 -- block: M273 ,M1755, M3987, M4190 -- collisions in columns: 423 168 173 
+Signature 254421802766378 -- block: M540 ,M910, M1703, M1794 -- collisions in columns: 228 90 
+Signature 254697147546637 -- block: M1248 ,M2526, M3310, M4133 -- collisions in columns: 90 423 
+Signature 255438301206258 -- block: M978 ,M1537, M3245, M3776 -- collisions in columns: 423 154 
+Signature 255627193654877 -- block: M1991 ,M3035, M3353, M3808 -- collisions in columns: 423 404 
+Signature 255915672508079 -- block: M1071 ,M1347, M1562, M3671 -- collisions in columns: 423 163 
+Signature 256266236689945 -- block: M1908 ,M2013, M2571, M3845 -- collisions in columns: 173 404 
+Signature 256709214207734 -- block: M1505 ,M2403, M2700, M3860 -- collisions in columns: 90 423 
+Signature 257533082870623 -- block: M1734 ,M2251, M2874, M3828 -- collisions in columns: 198 404 90 
+Signature 258233220605704 -- block: M1071 ,M1562, M3671, M3898 -- collisions in columns: 90 423 166 
+Signature 258259339512880 -- block: M1115 ,M1277, M3148, M3753 -- collisions in columns: 173 90 
+Signature 258311466107395 -- block: M1010 ,M1374, M2109, M3884 -- collisions in columns: 423 7 
+Signature 258359025048686 -- block: M2789 ,M3476, M3631, M3747 -- collisions in columns: 280 276 
+Signature 258743262830957 -- block: M1786 ,M2013, M2571, M3845 -- collisions in columns: 173 404 
+Signature 258822460949538 -- block: M1672 ,M2085, M2662, M2687 -- collisions in columns: 423 90 
+Signature 259427891499368 -- block: M2256 ,M2583, M3346, M3497 -- collisions in columns: 423 280 
+Signature 259637262378948 -- block: M1505 ,M2700, M3314, M3860 -- collisions in columns: 404 90 166 
+Signature 259649533989894 -- block: M1108 ,M2501, M3103, M3249 -- collisions in columns: 168 227 
+Signature 260313144345680 -- block: M540 ,M910, M1703, M3875 -- collisions in columns: 423 90 
+Signature 260513157488083 -- block: M2403 ,M3314, M3655, M3860 -- collisions in columns: 276 90 
+Signature 260731214983550 -- block: M40 ,M2373, M2631, M4167 -- collisions in columns: 280 90 
+Signature 260758846411748 -- block: M1071 ,M1835, M3671, M3898 -- collisions in columns: 90 423 166 
+Signature 260805404692480 -- block: M1248 ,M2350, M2526, M2739 -- collisions in columns: 90 423 
+Signature 261202204574037 -- block: M672 ,M2286, M2804, M2937 -- collisions in columns: 90 228 
+Signature 261358527311171 -- block: M782 ,M1588, M3187, M4010 -- collisions in columns: 280 90 
+Signature 261466408623745 -- block: M788 ,M792, M1106, M2899 -- collisions in columns: 280 205 423 
+Signature 262055517751125 -- block: M954 ,M1219, M1999, M3640 -- collisions in columns: 404 276 
+Signature 262061690116964 -- block: M1399 ,M1457, M2749, M3970 -- collisions in columns: 90 423 
+Signature 262063814682996 -- block: M430 ,M2011, M3091, M4357 -- collisions in columns: 276 90 
+Signature 262103236947117 -- block: M701 ,M3035, M3353, M3808 -- collisions in columns: 404 423 
+Signature 263109567291295 -- block: M873 ,M1672, M2662, M2687 -- collisions in columns: 90 423 
+Signature 263522106618546 -- block: M711 ,M2101, M2684, M4075 -- collisions in columns: 90 423 
+Signature 263719586549573 -- block: M540 ,M1684, M1794, M3875 -- collisions in columns: 276 332 
+Signature 264262600212593 -- block: M286 ,M591, M1550, M2278 -- collisions in columns: 402 423 228 
+Signature 264629585998001 -- block: M140 ,M1095, M1776, M2873 -- collisions in columns: 228 7 
+Signature 264851419814089 -- block: M237 ,M1794, M3764, M3838 -- collisions in columns: 227 404 
+Signature 264928374175968 -- block: M908 ,M1533, M1679, M2517 -- collisions in columns: 90 39 
+Signature 265072994238759 -- block: M514 ,M908, M1679, M2517 -- collisions in columns: 90 423 
+Signature 265708229863536 -- block: M1399 ,M1457, M3950, M3970 -- collisions in columns: 423 90 
+Signature 266017046886940 -- block: M1684 ,M1703, M3764, M3875 -- collisions in columns: 173 441 205 
+Signature 266039859219918 -- block: M636 ,M1684, M1794, M3875 -- collisions in columns: 276 332 
+Signature 266620603272866 -- block: M1071 ,M1562, M1835, M3898 -- collisions in columns: 423 166 90 
+Signature 266682609505876 -- block: M540 ,M910, M1794, M3875 -- collisions in columns: 90 276 
+Signature 267135215191849 -- block: M430 ,M1046, M3091, M4357 -- collisions in columns: 90 276 
+Signature 267452226993568 -- block: M555 ,M1593, M2609, M4286 -- collisions in columns: 400 228 423 
+Signature 267492682000944 -- block: M402 ,M465, M2608, M3870 -- collisions in columns: 173 423 
+Signature 267833498792328 -- block: M774 ,M1977, M2034, M4053 -- collisions in columns: 276 90 
+Signature 267950055693454 -- block: M1212 ,M1399, M2102, M3950 -- collisions in columns: 90 276 
+Signature 268863881565836 -- block: M171 ,M954, M1999, M3640 -- collisions in columns: 276 332 
+Signature 269002882176221 -- block: M636 ,M910, M1794, M3875 -- collisions in columns: 276 90 
+Signature 269088612279644 -- block: M701 ,M1991, M3035, M3353 -- collisions in columns: 404 423 
+Signature 269927529237985 -- block: M1347 ,M1562, M3671, M3898 -- collisions in columns: 423 332 
+Signature 270026994405827 -- block: M701 ,M1991, M3035, M3808 -- collisions in columns: 404 423 
+Signature 270052931987723 -- block: M171 ,M1999, M2296, M3640 -- collisions in columns: 276 496 
+Signature 271276928143984 -- block: M362 ,M2190, M3177, M3383 -- collisions in columns: 404 90 
+Signature 271649034586070 -- block: M1248 ,M2350, M2739, M4133 -- collisions in columns: 90 423 
+Signature 271669471912431 -- block: M556 ,M1537, M2884, M3776 -- collisions in columns: 392 276 
+Signature 272386512047136 -- block: M1684 ,M1794, M3764, M3875 -- collisions in columns: 173 276 
+Signature 273102688746398 -- block: M1212 ,M1457, M2102, M3950 -- collisions in columns: 276 90 
+Signature 273144697357421 -- block: M155 ,M234, M643, M1373 -- collisions in columns: 491 276 
+Signature 273800351302081 -- block: M1537 ,M1697, M3245, M3776 -- collisions in columns: 154 423 
+Signature 273988282122189 -- block: M40 ,M1146, M2907, M4167 -- collisions in columns: 90 402 
+Signature 274819845766184 -- block: M731 ,M1551, M1857, M4065 -- collisions in columns: 90 173 
+Signature 275349535003439 -- block: M910 ,M1794, M3764, M3875 -- collisions in columns: 357 276 
+Signature 275740864715889 -- block: M237 ,M910, M1703, M3875 -- collisions in columns: 90 423 
+Signature 276430131155297 -- block: M954 ,M1999, M3137, M3640 -- collisions in columns: 404 276 
+Signature 277224696597009 -- block: M2256 ,M2583, M2848, M3497 -- collisions in columns: 423 276 
+Signature 277759564539330 -- block: M1505 ,M2398, M3655, M3860 -- collisions in columns: 228 166 
+Signature 277771106938192 -- block: M208 ,M342, M2497, M3001 -- collisions in columns: 423 404 90 
+Signature 278247286269741 -- block: M2350 ,M2526, M2739, M4133 -- collisions in columns: 423 90 
+Signature 278838149326118 -- block: M912 ,M1858, M2526, M2955 -- collisions in columns: 402 120 
+Signature 279569033706054 -- block: M655 ,M1219, M1999, M3137 -- collisions in columns: 276 404 
+Signature 279752616245690 -- block: M1505 ,M2403, M3314, M3860 -- collisions in columns: 7 90 
+Signature 279784657124960 -- block: M1052 ,M1946, M3481, M3816 -- collisions in columns: 90 276 
+Signature 279889772788881 -- block: M1399 ,M1457, M2102, M3950 -- collisions in columns: 90 276 
+Signature 279935279285013 -- block: M370 ,M1052, M1946, M3816 -- collisions in columns: 90 276 
+Signature 280391459963228 -- block: M872 ,M2052, M2472, M2617 -- collisions in columns: 198 276 
+Signature 280537512448006 -- block: M978 ,M1537, M1697, M3776 -- collisions in columns: 154 423 
+Signature 280560215593974 -- block: M1046 ,M2011, M3091, M4357 -- collisions in columns: 276 90 
+Signature 280669839849558 -- block: M1399 ,M1457, M2749, M3950 -- collisions in columns: 90 423 
+Signature 280784193032863 -- block: M300 ,M447, M1960, M2324 -- collisions in columns: 90 423 
+Signature 281423266118787 -- block: M1010 ,M2109, M3884, M4007 -- collisions in columns: 7 423 
+Signature 282110329876085 -- block: M237 ,M910, M1794, M3875 -- collisions in columns: 471 90 357 
+Signature 282623728741538 -- block: M267 ,M1157, M1812, M4353 -- collisions in columns: 423 276 
+Signature 283171581493016 -- block: M430 ,M2011, M2994, M3091 -- collisions in columns: 276 228 
+Signature 284020658572347 -- block: M430 ,M1046, M2011, M4357 -- collisions in columns: 90 276 
+Signature 284929354826862 -- block: M1248 ,M2526, M2739, M4133 -- collisions in columns: 90 423 
+Signature 285508174628492 -- block: M1505 ,M2700, M3655, M3860 -- collisions in columns: 90 404 166 
+Signature 286243618703356 -- block: M655 ,M954, M1219, M3137 -- collisions in columns: 404 276 
+Signature 286863035739313 -- block: M1588 ,M2734, M3187, M4010 -- collisions in columns: 7 90 
+Signature 287411549643145 -- block: M881 ,M884, M1553, M3751 -- collisions in columns: 404 90 
+Signature 287881437403954 -- block: M978 ,M1697, M3245, M3776 -- collisions in columns: 154 423 
+Signature 288078254148814 -- block: M1010 ,M1374, M2109, M4007 -- collisions in columns: 7 423 
+Signature 288242982001869 -- block: M430 ,M1046, M2994, M3091 -- collisions in columns: 86 276 
+Signature 288946546504428 -- block: M370 ,M1052, M1946, M3481 -- collisions in columns: 276 90 
+Signature 289180392522011 -- block: M540 ,M636, M1794, M3875 -- collisions in columns: 332 276 168 90 
+Signature 289244994128547 -- block: M514 ,M908, M1533, M2517 -- collisions in columns: 166 90 
+Signature 289658956865811 -- block: M1248 ,M2350, M2526, M4133 -- collisions in columns: 423 90 
+Signature 290038264344013 -- block: M1374 ,M2109, M3884, M4007 -- collisions in columns: 423 7 
+Signature 290922316198782 -- block: M881 ,M1553, M2931, M3197 -- collisions in columns: 90 423 
+Signature 291526624837154 -- block: M2129 ,M2373, M2431, M2907 -- collisions in columns: 198 90 
+Signature 292347306152722 -- block: M237 ,M636, M1703, M1794 -- collisions in columns: 52 90 
+Signature 292697370511317 -- block: M1399 ,M2749, M3950, M3970 -- collisions in columns: 90 423 
+Signature 292824226711641 -- block: M1071 ,M1347, M3671, M3898 -- collisions in columns: 205 423 
+Signature 292924885903219 -- block: M1276 ,M2274, M3548, M3960 -- collisions in columns: 423 90 
+Signature 293051982518067 -- block: M171 ,M655, M954, M3137 -- collisions in columns: 423 276 
+Signature 293172127456449 -- block: M1897 ,M1942, M2677, M3975 -- collisions in columns: 280 90 
+Signature 293769030641219 -- block: M451 ,M1108, M2501, M3249 -- collisions in columns: 168 228 
+Signature 294083709546347 -- block: M397 ,M999, M1572, M4019 -- collisions in columns: 423 90 
+Signature 294614841209673 -- block: M455 ,M2168, M2263, M2521 -- collisions in columns: 7 276 
+Signature 295918375061679 -- block: M237 ,M540, M1703, M3875 -- collisions in columns: 423 90 
+Signature 296478010618796 -- block: M1926 ,M2827, M3425, M4207 -- collisions in columns: 473 404 
+Signature 297803857001217 -- block: M1587 ,M2446, M3224, M3931 -- collisions in columns: 168 39 
+Signature 297815839140655 -- block: M881 ,M1553, M2931, M3605 -- collisions in columns: 90 276 
+Signature 297850003564261 -- block: M1457 ,M2749, M3950, M3970 -- collisions in columns: 423 90 
+Signature 297982971028782 -- block: M655 ,M954, M1219, M1999 -- collisions in columns: 276 404 
+Signature 298238647732024 -- block: M237 ,M636, M1703, M3875 -- collisions in columns: 52 90 
+Signature 298335518541275 -- block: M1010 ,M1374, M3884, M4007 -- collisions in columns: 357 423 7 
+Signature 299638823011300 -- block: M1786 ,M1908, M2013, M3845 -- collisions in columns: 173 404 
+Signature 299745513354446 -- block: M1942 ,M2677, M2790, M3975 -- collisions in columns: 90 280 
+Signature 300503167722209 -- block: M881 ,M1553, M3197, M3751 -- collisions in columns: 404 90 
+Signature 300626117359113 -- block: M370 ,M1946, M3481, M3816 -- collisions in columns: 90 276 
+Signature 301667982403994 -- block: M1046 ,M2011, M2994, M3091 -- collisions in columns: 276 404 
+Signature 301945210362313 -- block: M2014 ,M2493, M3087, M3702 -- collisions in columns: 173 423 
+Signature 302612086173752 -- block: M782 ,M1588, M2734, M3187 -- collisions in columns: 423 90 
+Signature 303845268788328 -- block: M782 ,M1588, M2734, M3364 -- collisions in columns: 423 276 
+Signature 304112608110127 -- block: M556 ,M1697, M2884, M3776 -- collisions in columns: 276 404 
+Signature 304608112892220 -- block: M237 ,M636, M1794, M3875 -- collisions in columns: 90 52 
+Signature 304791334843493 -- block: M171 ,M655, M954, M1999 -- collisions in columns: 276 205 
+Signature 305460926252657 -- block: M1897 ,M1942, M2677, M2790 -- collisions in columns: 90 280 
+Signature 306906955546341 -- block: M1786 ,M1908, M2571, M3845 -- collisions in columns: 404 173 
+Signature 308508656525459 -- block: M40 ,M1146, M2631, M2907 -- collisions in columns: 7 90 
+Signature 308551576666448 -- block: M1505 ,M3314, M3655, M3860 -- collisions in columns: 90 404 166 
+Signature 308881423067563 -- block: M171 ,M954, M1219, M3137 -- collisions in columns: 276 154 
+Signature 308940573455824 -- block: M771 ,M2947, M3164, M3609 -- collisions in columns: 357 168 
+Signature 309629962154935 -- block: M1897 ,M2677, M2790, M3975 -- collisions in columns: 280 90 
+Signature 309795991162947 -- block: M803 ,M1074, M2568, M3913 -- collisions in columns: 423 380 
+Signature 310954765719438 -- block: M237 ,M1794, M3764, M3875 -- collisions in columns: 357 173 
+Signature 311753226717877 -- block: M1897 ,M1942, M2790, M3975 -- collisions in columns: 90 280 
+Signature 312211822466595 -- block: M171 ,M954, M3137, M3936 -- collisions in columns: 154 423 
+Signature 312357584432954 -- block: M655 ,M954, M1999, M3137 -- collisions in columns: 276 404 
+Signature 315158104257477 -- block: M636 ,M1703, M1794, M3875 -- collisions in columns: 52 90 
+Signature 315439410077590 -- block: M1248 ,M1858, M2526, M4133 -- collisions in columns: 90 120 332 
+Signature 315593457970958 -- block: M782 ,M2734, M3187, M4010 -- collisions in columns: 402 90 
+Signature 318783806001139 -- block: M912 ,M1248, M2526, M4133 -- collisions in columns: 404 120 
+Signature 320588184607403 -- block: M556 ,M1537, M1697, M3776 -- collisions in columns: 276 423 
+Signature 321418536213647 -- block: M91 ,M1587, M2104, M3224 -- collisions in columns: 90 423 
+Signature 321528571102041 -- block: M70 ,M2827, M3425, M4207 -- collisions in columns: 332 404 
+Signature 325342222715679 -- block: M1146 ,M2129, M2431, M2631 -- collisions in columns: 205 90 
+Signature 326568142107689 -- block: M40 ,M2129, M2431, M4167 -- collisions in columns: 423 90 
+Signature 328187024982450 -- block: M954 ,M1219, M1999, M3137 -- collisions in columns: 404 276 
+Signature 328265551957341 -- block: M237 ,M1703, M1794, M3875 -- collisions in columns: 90 52 173 
+Signature 329097325917390 -- block: M430 ,M1046, M2011, M3091 -- collisions in columns: 90 276 
+Signature 337211327119495 -- block: M701 ,M1991, M3353, M3808 -- collisions in columns: 423 404 
+Signature 341407785136245 -- block: M845 ,M1445, M1461, M3993 -- collisions in columns: 423 283 
+Signature 352048155396630 -- block: M370 ,M1052, M3481, M3816 -- collisions in columns: 276 90 
+Signature 371412666320121 -- block: M1423 ,M2569, M3729, M3845 -- collisions in columns: 276 154 

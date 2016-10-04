@@ -52,6 +52,7 @@ int main(void)
     readKeys();
     //omp section start
     omp_set_num_threads(core_number);
+    //start parallel computing to calculate signatures for each column
 #pragma omp parallel
     {
 #pragma omp for
@@ -63,18 +64,17 @@ int main(void)
     //omp section ends, all signatures are calculated into an array
     printf("%d columns have blocks, total block number is %ld\n", total_col_has_neighbours, total_block_number);
     fprintf(log_txt, "%d columns have blocks, total block number is %ld\n", total_col_has_neighbours, total_block_number);
-
     //sorting all signatures
     printf("\nQuick sorting all signatures...\n");
     fprintf(log_txt, "\nQuick sorting all signatures......\n");
     quicksort(signatures, 0, total_block_number);
     printf("Quick sorting finished! \n\nStart collision detecting...\n");
     fprintf(log_txt, "Quick sorting finished! \n\nStart collision detecting...\n");
-    //compare neighbouring signatures, if they are equal then collisions are detected.
+    //compare sorted signatures, if they are equal then collisions are detected.
     int i = 0;
     while (i < total_block_number)
     {
-        if (signatures[i] == signatures[i + 1] && correspond_col[i] != correspond_col[i + 1])
+        if (signatures[i] == signatures[i + 1] && correspond_col[i] != correspond_col[i + 1]) 
         {
             int last_same_index = i + 1;
             while (signatures[i] == signatures[last_same_index])
