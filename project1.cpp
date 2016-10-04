@@ -1,6 +1,10 @@
 //YanJi, 21824073
 //Compile with g++ -fopenmp project1.cpp
 //Results are recorded in the result.txt file. Logs are in the log.txt file.
+//References:
+//http://stackoverflow.com/questions/3501338/c-read-file-line-by-line
+//http://stackoverflow.com/questions/4513316/split-string-in-c-every-white-space
+//https://gist.github.com/codeblocks/952063
 
 #include <stdio.h>
 #include <stdlib.h>
