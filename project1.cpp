@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <omp.h>
-#define length_of_arrays 30000000
+#define length_of_array 30000000
 
 //setting: provdie the core number of CPU
 static const int core_number = 8;
