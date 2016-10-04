@@ -27,18 +27,19 @@ void quicksort(long x[], long first, long last);
 void allocateMemory(int col);
 
 //static data structures
+static const int length_of_arrays=30000000;            //the length of the signatures array
 static double data[500][4400];                    //original data
 static long keys[4400];                           //the keys of each row
 static const double dia = 0.000001;               // dia
-static long *signatures = new long[30000000];     //signatures of all rows in a one-dimensinal array
+static long *signatures = new long[length_of_array];     //signatures of all rows in a one-dimensinal array
 static long signature_number[500] = {0};          //the total signature number of each column
 static long start_point[500] = {0};               //management of the start and end index of each column
 static long filled_signature[500] = {0};          //count the already calculated signature number of each column
-static int *signatures_one = new int[30000000];   //record the first element of each block
-static int *signatures_two = new int[30000000];   //record the second element of each block
-static int *signatures_three = new int[30000000]; //record the third element of each block
-static int *signatures_four = new int[30000000];  //record the fourth element of each block
-static int *correspond_col = new int[30000000];   //record the column number of each block
+static int *signatures_one = new int[length_of_array];   //record the first element of each block
+static int *signatures_two = new int[length_of_array];   //record the second element of each block
+static int *signatures_three = new int[length_of_array]; //record the third element of each block
+static int *signatures_four = new int[length_of_array];  //record the fourth element of each block
+static int *correspond_col = new int[length_of_array];   //record the column number of each block
 
 static int total_col_has_blocks = 0; //total number of columns that have blocks
 static long total_block_number = 0;  //total number of blocks in all columns
