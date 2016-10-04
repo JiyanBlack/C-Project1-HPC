@@ -20,24 +20,25 @@ long getOneSignature(int row1, int row2, int row3, int row4);
 void setSignature(int col, int index, long value, int one, int two, int three, int four);
 long getStartPoint(int col);
 void quicksort(long x[], long first, long last);
+void allocateMemory(int col);
 
 //static data structures
-static double data[500][4400];
-static long keys[4400];
-static const double dia = 0.000001;
-static long *signatures = new long[29327137];
-static long start_point[500] = {0};
-static long filled_signature[500] = {0};
-static int *signatures_one = new int[29327137];
-static int *signatures_two = new int[29327137];
-static int *signatures_three = new int[29327137];
-static int *signatures_four = new int[29327137];
-static int *correspond_col = new int[29327137];
-static long final_result[500]; //final resulti of the combination of row
-static int total_col_has_neighbours = 0;
-static long total_block_number = 0;
-static long collision_number = 0;
-static long signature_number[500] = {5, 0, 0, 0, 0, 1, 0, 50, 0, 0, 1, 1, 0, 2, 2, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 6, 3, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 3, 1, 962, 1, 0, 0, 0, 0, 4, 0, 1, 1, 1, 1, 0, 1, 0, 0, 3, 2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 234, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 33, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 38, 73, 61, 0, 0, 0, 0, 85, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 2, 1, 0, 0, 0, 0, 1, 0, 0, 62, 2, 0, 0, 1, 2, 0, 35, 0, 0, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 28, 92, 0, 1, 1, 0, 1, 0, 0, 0, 16, 0, 2, 1, 0, 0, 0, 1, 0, 1, 2, 0, 0, 0, 1, 4, 1, 0, 0, 0, 0, 1, 2, 1, 1, 0, 0, 0, 1, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 1268, 0, 1, 0, 69, 0, 0, 28, 1, 0, 0, 0, 5, 0, 2, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 5, 0, 0, 0, 2, 0, 0, 0, 1, 1, 0, 0, 0, 168, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 72, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 1, 1, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 31, 0, 0, 4, 0, 9, 0, 1, 1, 0, 0, 0, 1, 5, 0, 37, 0, 350, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1553, 1, 0, 0, 0, 0, 3, 0, 1, 3, 0, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0, 158, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 17, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 2, 1, 0, 0, 0, 1, 0, 0, 29321366};
+static double data[500][4400];                    //original data
+static long keys[4400];                           //the keys of each row
+static const double dia = 0.000001;               // dia
+static long *signatures = new long[30000000];     //signatures of all rows in a one-dimensinal array
+static long signature_number[500] = {0};          //the total signature number of each column
+static long start_point[500] = {0};               //management of the start and end index of each column
+static long filled_signature[500] = {0};          //count the already calculated signature number of each column
+static int *signatures_one = new int[30000000];   //record the first element of each block
+static int *signatures_two = new int[30000000];   //record the second element of each block
+static int *signatures_three = new int[30000000]; //record the third element of each block
+static int *signatures_four = new int[30000000];  //record the fourth element of each block
+static int *correspond_col = new int[30000000];   //record the column number of each block
+
+static int total_col_has_blocks = 0; //total number of columns that have blocks
+static long total_block_number = 0;  //total number of blocks in all columns
+static long collision_number = 0;    //total collision number
 //result and log file
 static FILE *result_txt;
 static FILE *log_txt;
@@ -51,19 +52,28 @@ int main(void)
     readData();
     readKeys();
     //omp section start
-    omp_set_num_threads(core_number);
-    //start parallel computing to calculate signatures for each column
+    omp_set_num_threads(core_number); //set thread number
+    int interval = (int)498 / (core_number - 1) + 1;
+//start parallel computing to calculate signatures for each column
 #pragma omp parallel
     {
 #pragma omp for
         for (int col = 499; col >= 0; col--)
         {
+            //allocate memory for the blocks of each column
+            allocateMemory(col);
+        }
+#pragma omp barrier
+#pragma omp for
+        for (int col = 499; col >= 0; col--)
+        {
+            //calculate signatures for each column
             calcSignatures(col);
         }
     }
     //omp section ends, all signatures are calculated into an array
-    printf("%d columns have blocks, total block number is %ld\n", total_col_has_neighbours, total_block_number);
-    fprintf(log_txt, "%d columns have blocks, total block number is %ld\n", total_col_has_neighbours, total_block_number);
+    printf("%d columns have blocks, total block number is %ld\n", total_col_has_blocks, total_block_number);
+    fprintf(log_txt, "%d columns have blocks, total block number is %ld\n", total_col_has_blocks, total_block_number);
     //sorting all signatures
     printf("\nQuick sorting all signatures...\n");
     fprintf(log_txt, "\nQuick sorting all signatures......\n");
@@ -74,7 +84,7 @@ int main(void)
     int i = 0;
     while (i < total_block_number)
     {
-        if (signatures[i] == signatures[i + 1] && correspond_col[i] != correspond_col[i + 1]) 
+        if (signatures[i] == signatures[i + 1] && correspond_col[i] != correspond_col[i + 1])
         {
             int last_same_index = i + 1;
             while (signatures[i] == signatures[last_same_index])
@@ -101,6 +111,61 @@ int main(void)
     printf("Collisions are recorded in the result.txt file.\n");
     fclose(result_txt);
     fclose(log_txt);
+}
+
+void allocateMemory(int col)
+{
+    //generate neighbours for each row in each col
+    int col_neighbours[4400][200];
+    int exist_neighbours = 0;
+    for (int row = 0; row < 4400; row++)
+    {
+        col_neighbours[row][0] = -2;
+        int index = 0;
+        for (int x = row + 1; x < 4400; x++)
+        {
+            if (isNeighbour(row, x, col) == 1)
+            {
+                col_neighbours[row][index] = x;
+                index += 1;
+            }
+        }
+        if (index < 3)
+        {
+            col_neighbours[row][0] = -2;
+        }
+        else
+        {
+            col_neighbours[row][index] = -2;
+            col_neighbours[row][index + 1] = -2;
+            col_neighbours[row][index + 2] = -2;
+            exist_neighbours = 1;
+        }
+    }
+    int index = 0;
+    if (exist_neighbours == 1)
+    {
+        total_col_has_blocks += 1;
+        for (int row = 0; row < 4400; row++)
+        {
+            if (col_neighbours[row][0] >= 0)
+            {
+                for (int x = 0; col_neighbours[row][x] > 0; x++)
+                {
+                    for (int y = x + 1; col_neighbours[row][y] > 0; y++)
+                    {
+                        for (int z = y + 1; col_neighbours[row][z] > 0; z++)
+                        {
+                            index += 1;
+                            total_block_number += 1;
+                        }
+                    }
+                }
+            }
+        }
+        printf("Allocate memory for column %d\n", col);
+    }
+    signature_number[col] = index;
 }
 
 void quicksort(long x[], long first, long last)
@@ -202,7 +267,6 @@ void calcSignatures(int col)
     int index = 0;
     if (exist_neighbours == 1)
     {
-        total_col_has_neighbours += 1;
         for (int row = 0; row < 4400; row++)
         {
             if (col_neighbours[row][0] >= 0)
@@ -216,14 +280,13 @@ void calcSignatures(int col)
                             long signature = getOneSignature(row, col_neighbours[row][x], col_neighbours[row][y], col_neighbours[row][z]);
                             setSignature(col, -1, signature, row, col_neighbours[row][x], col_neighbours[row][y], col_neighbours[row][z]);
                             index += 1;
-                            total_block_number += 1;
                         }
                     }
                 }
             }
         }
-        printf("Col %d has blocks %d\n", col, index);
-        fprintf(log_txt, "Col %d has blocks %d\n", col, index);
+        printf("Col %d has signatures %d\n", col, index);
+        fprintf(log_txt, "Col %d has signatures %d\n", col, index);
     }
     signature_number[col] = index;
 }
