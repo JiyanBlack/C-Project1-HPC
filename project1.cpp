@@ -1,6 +1,11 @@
-//YanJi, 21824073
+//Author:
+//YanJi, 21824073, CITS5507
+//JuanLu, 21691401, CITS3402
+
 //Compile with g++ -fopenmp project1.cpp
+
 //Results are recorded in the result.txt file. Logs are in the log.txt file.
+
 //References:
 //http://stackoverflow.com/questions/3501338/c-read-file-line-by-line
 //http://stackoverflow.com/questions/4513316/split-string-in-c-every-white-space
@@ -76,18 +81,19 @@ int main(void)
             //calculate signatures for each column
             calcSignatures(col);
         }
-    }
-    //omp section ends, all signatures are calculated into an array
-    printf("%d columns have blocks, total block number is %ld\n", total_col_has_blocks, total_block_number);
-    fprintf(log_txt, "%d columns have blocks, total block number is %ld\n", total_col_has_blocks, total_block_number);
-    //sorting all signatures
-    printf("\nQuick sorting all signatures...\n");
-    fprintf(log_txt, "\nQuick sorting all signatures......\n");
-    int interval = (int)(total_block_number / core_number) + 1;
-    //merge sort begin
-    printf("Start to sort sections of signatures...\n");
-#pragma omp parallel
-    {
+        //omp section ends, all signatures are calculated into an array
+        if (omp_get_thread_num() == 0)
+        {
+            printf("%d columns have blocks, total block number is %ld\n", total_col_has_blocks, total_block_number);
+            fprintf(log_txt, "%d columns have blocks, total block number is %ld\n", total_col_has_blocks, total_block_number);
+            //sorting all signatures
+            printf("\nQuick sorting all signatures...\n");
+            fprintf(log_txt, "\nQuick sorting all signatures......\n");
+            //merge sort begin
+            printf("Start to sort sections of signatures...\n");
+        }
+        int interval = (int)(total_block_number / core_number) + 1;
+#pragma omp barrier
 #pragma omp for
         //parallel quick sorting all signatures
         for (int i = 0; i < core_number; i++)
@@ -118,21 +124,22 @@ int main(void)
         }
         indexes[cur_min_index] += 1;
     }
-    //merge sort finish
     printf("Quick sorting finished! \n\nStart collision detecting...\n");
     fprintf(log_txt, "Quick sorting finished! \n\nStart collision detecting...\n");
     //compare sorted signatures, if they are equal then collisions are detected.
     i = 0;
     while (i < total_block_number)
     {
+        // if the adjacent signatures are the same and their corresponding columns are different, a collision is found
         if (sorted_signatures[i] == sorted_signatures[i + 1] && correspond_col[i] != correspond_col[i + 1])
         {
-            int collision_cols[6] = {0};
-            collision_cols[0] = sorted_signatures[i];
-            int collision_cols_index = 1;
-            int last_same_index = i + 1;
+            int collision_cols[6] = {0};              //a temporary array for storing the collision columns
+            collision_cols[0] = sorted_signatures[i]; //initialize collision columns array with the first element
+            int collision_cols_index = 1;             //the number of collision columns
+            int last_same_index = i + 1;              //the last index that has the same signature of index i.
             fprintf(result_txt, "Signature %ld -- block: M%d ,M%d, M%d, M%d -- collisions in columns: %d ", sorted_signatures[i], signatures_one[i], signatures_two[i], signatures_three[i], signatures_four[i], correspond_col[i]);
             while (sorted_signatures[i] == sorted_signatures[last_same_index])
+            //calculate the last_same_index and print out the columns that have collisions but not stored yet
             {
                 if (correspond_col[i] != correspond_col[last_same_index] && isInArray(collision_cols, correspond_col[last_same_index]) == 0)
                 {
@@ -151,6 +158,7 @@ int main(void)
             i += 1;
         }
     }
+    //collision detection finishes.
     printf("%ld collisions are detected.\n", collision_number);
     fprintf(log_txt, "%ld collisions are detected.\n", collision_number);
     printf("\nLogs are recorded in the log.txt file.\n");
