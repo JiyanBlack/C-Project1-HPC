@@ -15,10 +15,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <omp.h>
-#define length_of_array 30000000
 
+#define length_of_array 30000000
 //setting: provdie the core number of CPU
-static const int core_number = 64;
+#define core_number 1
+
+
 
 void readData();
 void readKeys();
@@ -91,6 +93,7 @@ int main(void)
             fprintf(log_txt, "\nQuick sorting all signatures......\n");
             //merge sort begin
             printf("Start to sort sections of signatures...\n");
+            fprintf(log_txt, "Start to sort sections of signatures...\n");
         }
         int interval = (int)(total_block_number / core_number) + 1;
 #pragma omp barrier
@@ -101,7 +104,8 @@ int main(void)
             quicksort(signatures, omp_get_thread_num() * interval, (omp_get_thread_num() + 1) * interval - 1);
         }
     }
-    printf("All sections are finished\n");
+    printf("All sections are sorted, start to merge...\n");
+    fprintf(log_txt, "All sections are sorted, start to merge...\n");
     //merging sorted child arrays of signatures
     int indexes[1000] = {0};
     int i = 0;
@@ -133,7 +137,7 @@ int main(void)
         // if the adjacent signatures are the same and their corresponding columns are different, a collision is found
         if (sorted_signatures[i] == sorted_signatures[i + 1] && correspond_col[i] != correspond_col[i + 1])
         {
-            int collision_cols[6] = {0};              //a temporary array for storing the collision columns
+            int collision_cols[20] = {0};              //a temporary array for storing the collision columns
             collision_cols[0] = sorted_signatures[i]; //initialize collision columns array with the first element
             int collision_cols_index = 1;             //the number of collision columns
             int last_same_index = i + 1;              //the last index that has the same signature of index i.
