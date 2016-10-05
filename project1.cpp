@@ -18,7 +18,7 @@
 #define length_of_array 30000000
 
 //setting: provdie the core number of CPU
-static const int core_number = 8;
+static const int core_number = 1;
 
 void readData();
 void readKeys();
