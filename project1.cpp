@@ -18,7 +18,7 @@
 
 #define length_of_array 30000000
 //setting: provdie the core number of CPU
-#define core_number 1
+#define core_number 8
 
 
 
